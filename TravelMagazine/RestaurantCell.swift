@@ -9,15 +9,9 @@ import UIKit
 
 class RestaurantCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    @IBOutlet var restaurantImageView: UIImageView!
+    @IBOutlet var restaurantTitle: UILabel!
+    @IBOutlet var restaurantSubtitle: UILabel!
+    @IBOutlet var restaurantAdress: UILabel!
 
 }
