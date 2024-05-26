@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MainViewController: UIViewController {
 
@@ -44,7 +45,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         
         
         let magazine = magazinInfo.magazine[indexPath.row]
-        
+        let url = URL(string: magazine.photo_image)
+        cell.magazineImageView.kf.setImage(with: url)
         cell.titleLabel.text = magazine.title
         cell.subtitleLabel.text = magazine.subtitle
         let dateFormatter = DateFormatter()

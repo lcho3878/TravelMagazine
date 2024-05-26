@@ -76,7 +76,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dateLabel" destination="bQn-ME-1os" id="fj5-hH-VWb"/>
-                                            <outlet property="magazineImageView" destination="GVO-bS-gEU" id="TWw-Hc-2MP"/>
+                                            <outlet property="magazineImageView" destination="JtN-Qq-dyh" id="LzE-eu-dmt"/>
                                             <outlet property="subtitleLabel" destination="Ygq-Tt-CCw" id="ODI-F2-CRb"/>
                                             <outlet property="titleLabel" destination="tvp-fm-dbf" id="BSA-5P-vSq"/>
                                         </connections>
