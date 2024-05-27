@@ -11,14 +11,19 @@ import Kingfisher
 class RestaurantViewController: UITableViewController {
 
     private let restaurantList = RestaurantList()
+    private var filterList = [Restaurant]()
+    @IBOutlet var searchButton: UIButton!
+    @IBOutlet var searchTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        filterList = restaurantList.restaurantArray
 
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restaurantList.restaurantArray.count
+        return filterList.count
+
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -30,7 +35,7 @@ class RestaurantViewController: UITableViewController {
             return UITableViewCell()
         }
         
-        let restaurant = restaurantList.restaurantArray[indexPath.row]
+        let restaurant = filterList[indexPath.row]
         let url = URL(string: restaurant.image)
         cell.restaurantImageView.kf.setImage(with: url)
         cell.restaurantTitle.text = restaurant.name
@@ -40,4 +45,12 @@ class RestaurantViewController: UITableViewController {
         return cell
     }
 
+    @IBAction func searchButtonClicked(_ sender: UIButton) {
+        filterList = restaurantList.restaurantArray
+        guard let category = searchTextField.text, category != "" else {
+            return
+        }
+        filterList = filterList.filter { $0.category == category }
+        tableView.reloadData()
+    }
 }

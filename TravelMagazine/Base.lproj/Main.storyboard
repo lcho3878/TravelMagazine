@@ -120,6 +120,15 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkF-YX-jNY">
+                                    <rect key="frame" x="310" y="28" width="75" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <connections>
+                                        <action selector="searchButtonClicked:" destination="T5f-vP-twp" eventType="touchUpInside" id="51X-52-Fhy"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
@@ -190,6 +199,10 @@
                             <outlet property="delegate" destination="T5f-vP-twp" id="cKE-3b-eSt"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="searchButton" destination="dkF-YX-jNY" id="fBc-aQ-BfG"/>
+                        <outlet property="searchTextField" destination="94k-4g-jkT" id="Jph-Lb-0BY"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZv-gg-OOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
