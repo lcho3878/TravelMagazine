@@ -14,6 +14,7 @@ class PopularCityTableViewCell: UITableViewCell {
     @IBOutlet var subTitle: UILabel!
     @IBOutlet var starStackView: UIStackView!
     @IBOutlet var saveCountLabel: UILabel!
+    @IBOutlet var heartButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,8 +32,7 @@ class PopularCityTableViewCell: UITableViewCell {
         
         mainImageView.layer.cornerRadius = 8
         mainImageView.contentMode = .scaleAspectFill
-        
-        
+
     }
     
     func configureData(_ data: Travel) {
@@ -47,6 +47,13 @@ class PopularCityTableViewCell: UITableViewCell {
         }
         if let save = data.save {
             saveCountLabel.text = "저장 \(save.formatted())"
+        }
+        
+        if let like = data.like {
+            let tintColor = like ? UIColor.red : UIColor.lightGray
+            let alpha = like ? 1 : 0.4
+            heartButton.tintColor = tintColor
+            heartButton.alpha = alpha
         }
         
     }

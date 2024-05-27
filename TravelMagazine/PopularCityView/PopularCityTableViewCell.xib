@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -76,11 +77,26 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJ2-iQ-VrF">
+                        <rect key="frame" x="334" y="8" width="31" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="jJ2-iQ-VrF" secondAttribute="height" multiplier="1:1" id="up8-Qy-5yc"/>
+                        </constraints>
+                        <color key="tintColor" red="1" green="0.19549614030000001" blue="0.25322499120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal">
+                            <color key="titleColor" systemColor="labelColor"/>
+                            <imageReference key="image" image="heart.fill" catalog="system"/>
+                        </state>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="fTX-xP-qHo" firstAttribute="leading" secondItem="ieE-EE-PW8" secondAttribute="trailing" constant="8" id="0ak-lG-Xbx"/>
+                    <constraint firstItem="jJ2-iQ-VrF" firstAttribute="top" secondItem="fTX-xP-qHo" secondAttribute="top" id="17g-i2-Lew"/>
+                    <constraint firstItem="jJ2-iQ-VrF" firstAttribute="trailing" secondItem="fTX-xP-qHo" secondAttribute="trailing" id="1JF-CZ-kWK"/>
                     <constraint firstItem="f9q-aa-tHF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="7Pr-Eh-2K5"/>
                     <constraint firstItem="ieE-EE-PW8" firstAttribute="top" secondItem="f9q-aa-tHF" secondAttribute="bottom" constant="2" id="JfX-cZ-QFP"/>
+                    <constraint firstItem="jJ2-iQ-VrF" firstAttribute="width" secondItem="fTX-xP-qHo" secondAttribute="width" multiplier="0.4" id="Lkz-tl-UhR"/>
                     <constraint firstItem="cXT-hH-tsh" firstAttribute="top" secondItem="ieE-EE-PW8" secondAttribute="bottom" constant="2" id="MLP-uT-iBi"/>
                     <constraint firstItem="CVb-dx-8ko" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="TVe-rZ-18S"/>
                     <constraint firstAttribute="bottom" secondItem="fTX-xP-qHo" secondAttribute="bottom" constant="8" id="ZCu-xr-tPr"/>
@@ -95,6 +111,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="heartButton" destination="jJ2-iQ-VrF" id="IIi-C6-8j8"/>
                 <outlet property="mainImageView" destination="fTX-xP-qHo" id="dIz-OQ-p0u"/>
                 <outlet property="mainTitle" destination="f9q-aa-tHF" id="8Qk-iO-frb"/>
                 <outlet property="saveCountLabel" destination="cXT-hH-tsh" id="aBR-3p-FtM"/>
@@ -105,7 +122,11 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="star" catalog="system" width="128" height="116"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

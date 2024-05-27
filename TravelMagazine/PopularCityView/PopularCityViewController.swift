@@ -10,7 +10,7 @@ import Kingfisher
 
 class PopularCityViewController: UIViewController {
 
-    private let list = TravelInfo().travel
+    private var list = TravelInfo().travel
     
     @IBOutlet var cityTableView: UITableView!
     
@@ -47,10 +47,17 @@ extension PopularCityViewController: UITableViewDelegate, UITableViewDataSource 
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularCityTableViewCell", for: indexPath) as? PopularCityTableViewCell else {
                 return UITableViewCell()
             }
+            cell.heartButton.tag = indexPath.row
+            cell.heartButton.addTarget(self, action: #selector(heartButtonClicked), for: .touchUpInside)
             cell.configureData(data)
             return cell
         }
 
+    }
+    
+    @objc func heartButtonClicked(_ sender: UIButton) {
+        list[sender.tag].like?.toggle()
+        cityTableView.reloadData()
     }
     
     
