@@ -12,6 +12,8 @@ class PopularCityTableViewCell: UITableViewCell {
     @IBOutlet var mainImageView: UIImageView!
     @IBOutlet var mainTitle: UILabel!
     @IBOutlet var subTitle: UILabel!
+    @IBOutlet var starStackView: UIStackView!
+    @IBOutlet var saveCountLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,8 +26,13 @@ class PopularCityTableViewCell: UITableViewCell {
         subTitle.textColor = .lightGray
         subTitle.font = .systemFont(ofSize: 13)
         
+        saveCountLabel.textColor = .lightGray
+        saveCountLabel.font = .systemFont(ofSize: 13)
+        
         mainImageView.layer.cornerRadius = 8
         mainImageView.contentMode = .scaleAspectFill
+        
+        
     }
     
     func configureData(_ data: Travel) {
@@ -34,6 +41,25 @@ class PopularCityTableViewCell: UITableViewCell {
         }
         mainTitle.text = data.title
         subTitle.text = data.description
+        
+        if let grade = data.grade {
+            fillStars(grade)
+        }
+        if let save = data.save {
+            saveCountLabel.text = "저장 \(save.formatted())"
+        }
+        
+    }
+    
+    func fillStars(_ grade: Double) {
+        let count = Int(grade)
+        for (i, item) in starStackView.subviews.enumerated() {
+            if i + 1 > count {
+                break
+            }
+            let imageView = item as! UIImageView
+            imageView.image = UIImage(systemName: "star.fill")
+        }
     }
     
 }
