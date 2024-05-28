@@ -9,6 +9,8 @@ import UIKit
 import Kingfisher
 
 class RestaurantCell: UITableViewCell {
+    
+    static let identifier = "RestaurantCell"
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var subtitleLabel: UILabel!

@@ -27,12 +27,17 @@ class RestaurantViewController: UITableViewController, UISearchBarDelegate {
     }
     
     func configureNavigationItems() {
-        let allButton = UIBarButtonItem(title: "전체", style: .plain, target: self, action: #selector(filterButtonClicked))
-        let koreanButton = UIBarButtonItem(title: "한식", style: .plain, target: self, action: #selector(filterButtonClicked))
-        let japanButton = UIBarButtonItem(title: "일식", style: .plain, target: self, action: #selector(filterButtonClicked))
-        let chinaButton = UIBarButtonItem(title: "중식", style: .plain, target: self, action: #selector(filterButtonClicked))
-        navigationItem.leftBarButtonItems = [allButton, koreanButton, japanButton, chinaButton]
+        let categories = Array(Set(list.map { $0.category }))
+        navigationItem.leftBarButtonItems = [filteringButton("전체")]
+        for category in categories {
+            navigationItem.leftBarButtonItems?.append(filteringButton(category))
+        }
         
+    }
+    
+    func filteringButton(_ title: String) -> UIBarButtonItem {
+        let button = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(filterButtonClicked))
+        return button
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,7 +46,7 @@ class RestaurantViewController: UITableViewController, UISearchBarDelegate {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell", for: indexPath) as? RestaurantCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantCell.identifier, for: indexPath) as? RestaurantCell else {
             return UITableViewCell()
         }
         
