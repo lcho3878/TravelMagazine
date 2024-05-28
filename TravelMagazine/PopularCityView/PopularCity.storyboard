@@ -48,12 +48,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4762.5954198473282" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="6616.0305343511445" y="-27.464788732394368"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--도시 상세 정보-->
         <scene sceneID="Jjh-AZ-fKJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="obh-dk-fcM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="도시 상세 정보" id="fny-yc-zzU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qJV-ua-q6O">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -66,7 +67,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dSH-Hv-zni" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3835.8778625954196" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="5689.3129770992364" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>
