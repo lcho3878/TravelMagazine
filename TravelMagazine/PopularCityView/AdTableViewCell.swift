@@ -11,7 +11,7 @@ class AdTableViewCell: UITableViewCell {
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var backView: UIView!
-    @IBOutlet var adLabel: UIView!
+    @IBOutlet var adLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +19,7 @@ class AdTableViewCell: UITableViewCell {
         backView.backgroundColor = RandomColor()
         backView.layer.cornerRadius = 8
         
+        adLabel.textColor = .black
         adLabel.backgroundColor = .white
         adLabel.layer.cornerRadius = 8
         

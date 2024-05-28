@@ -55,7 +55,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="adLabel" destination="SL8-Bi-Ixg" id="AAM-xv-R17"/>
+                <outlet property="adLabel" destination="SL8-Bi-Ixg" id="ocU-m3-jfL"/>
                 <outlet property="backView" destination="Z1J-cp-rtA" id="7eg-A9-RPt"/>
                 <outlet property="titleLabel" destination="szG-Lo-h0G" id="gNh-CY-omd"/>
             </connections>

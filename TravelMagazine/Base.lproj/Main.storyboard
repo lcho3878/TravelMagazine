@@ -100,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1907.6335877862596" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="1917" y="-421"/>
         </scene>
         <!--Restaurant View Controller-->
         <scene sceneID="95u-FL-v3c">
@@ -221,7 +221,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZv-gg-OOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3764.1221374045799" y="-28.169014084507044"/>
+            <point key="canvasLocation" x="2760" y="787"/>
         </scene>
         <!--Item-->
         <scene sceneID="Jjo-HJ-57b">
@@ -255,6 +255,7 @@
                     <connections>
                         <segue destination="tvt-Gn-IZc" kind="relationship" relationship="viewControllers" id="454-uW-OcY"/>
                         <segue destination="O3P-Hx-qIZ" kind="relationship" relationship="viewControllers" id="Hc6-hO-sxz"/>
+                        <segue destination="eC9-LG-Sqi" kind="relationship" relationship="viewControllers" id="Ge8-cu-bw4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tgq-Rr-0qD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -271,10 +272,11 @@
             </objects>
             <point key="canvasLocation" x="514" y="359"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="tW2-bO-hZZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eC9-LG-Sqi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="iAU-GI-gWx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xVC-Eq-dFw">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -287,7 +289,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GoM-vm-mt7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2837.4045801526718" y="-28.169014084507044"/>
+            <point key="canvasLocation" x="1804" y="787"/>
         </scene>
     </scenes>
     <resources>
