@@ -16,6 +16,10 @@ class PopularCityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTableView()
+    }
+    
+    private func configureTableView() {
         cityTableView.delegate = self
         cityTableView.dataSource = self
         cityTableView.rowHeight = 120
