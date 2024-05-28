@@ -22,12 +22,16 @@ class RestaurantCell: UITableViewCell {
 
     func configureLayout() {
         titleLabel.font = .boldSystemFont(ofSize: 17)
+        
         subtitleLabel.font = .systemFont(ofSize: 14)
         subtitleLabel.textColor = .darkGray
         subtitleLabel.numberOfLines = 0
+        
         descriptionLabel.font = .boldSystemFont(ofSize: 20)
         descriptionLabel.textColor = .blue
+        
         mainImageView.backgroundColor = .lightGray
+        mainImageView.contentMode = .scaleAspectFill
     }
     
     func configureCell(_ data: Restaurant) {
@@ -36,7 +40,7 @@ class RestaurantCell: UITableViewCell {
         descriptionLabel.text = data.price.formatted() + "원"
         let url = URL(string: data.image)
         mainImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "star"))
-        mainImageView.contentMode = .scaleAspectFill
+       
     }
     
 }

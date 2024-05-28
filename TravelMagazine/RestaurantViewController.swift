@@ -17,16 +17,22 @@ class RestaurantViewController: UITableViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTabelView()
+        configureNavigationItems()
+    }
+    
+    func configureTabelView() {
         tableView.rowHeight = 120
         filterList = list
-        
+    }
+    
+    func configureNavigationItems() {
         let allButton = UIBarButtonItem(title: "전체", style: .plain, target: self, action: #selector(filterButtonClicked))
         let koreanButton = UIBarButtonItem(title: "한식", style: .plain, target: self, action: #selector(filterButtonClicked))
         let japanButton = UIBarButtonItem(title: "일식", style: .plain, target: self, action: #selector(filterButtonClicked))
         let chinaButton = UIBarButtonItem(title: "중식", style: .plain, target: self, action: #selector(filterButtonClicked))
-        navigationItem.leftBarButtonItems = [allButton, koreanButton, japanButton, chinaButton ]
+        navigationItem.leftBarButtonItems = [allButton, koreanButton, japanButton, chinaButton]
         
-
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
