@@ -24,6 +24,7 @@ class RestaurantCell: UITableViewCell {
         titleLabel.font = .boldSystemFont(ofSize: 17)
         subtitleLabel.font = .systemFont(ofSize: 14)
         subtitleLabel.textColor = .darkGray
+        subtitleLabel.numberOfLines = 0
         descriptionLabel.font = .boldSystemFont(ofSize: 20)
         descriptionLabel.textColor = .blue
         mainImageView.backgroundColor = .lightGray
