@@ -27,17 +27,10 @@ class MagazineTableViewCell: UITableViewCell {
     }
     
     func configureData(_ magazine: Magazine) {
-        let url = URL(string: magazine.photo_image)
-        magazineImageView.kf.setImage(with: url)
+        magazineImageView.kf.setImage(with: magazine.photoURL)
         titleLabel.text = magazine.title
         subtitleLabel.text = magazine.subtitle
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yymmdd"
-        if let date = dateFormatter.date(from: magazine.date) {
-            dateFormatter.dateFormat = "yy년 mm월 dd일"
-            let formattedDate = dateFormatter.string(from: date)
-            dateLabel.text = formattedDate
-        }
+        dateLabel.text = magazine.dateString
     }
     
 
