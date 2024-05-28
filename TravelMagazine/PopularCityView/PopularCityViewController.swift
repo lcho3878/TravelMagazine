@@ -44,7 +44,7 @@ extension PopularCityViewController: UITableViewDelegate, UITableViewDataSource 
             guard let cell = tableView.dequeueReusableCell(withIdentifier: AdTableViewCell.identifier, for: indexPath) as? AdTableViewCell else {
                 return UITableViewCell()
             }
-            cell.titleLabel.text = data.title
+            cell.configureData(data)
             return cell
         }
         else {

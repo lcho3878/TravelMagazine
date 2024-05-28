@@ -15,22 +15,24 @@ class AdTableViewCell: UITableViewCell {
     @IBOutlet var backView: UIView!
     @IBOutlet var adLabel: UILabel!
     
+   
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        configureCell()
+    }
+    
+    private func configureCell () {
         backView.backgroundColor = RandomColor()
         backView.layer.cornerRadius = 8
         
         adLabel.textColor = .black
         adLabel.backgroundColor = .white
         adLabel.layer.cornerRadius = 8
-        
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func configureData(_ data: Travel) {
+        titleLabel.text = data.title
     }
     
     func RandomColor() -> UIColor {
