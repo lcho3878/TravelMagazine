@@ -39,23 +39,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MagazineTableViewCell.identifier, for: indexPath) as? MagazineTableViewCell else { return UITableViewCell()}
-        
-        cell.subtitleLabel.textColor = .gray
- 
-        
-        
+
         let magazine = magazinInfo.magazine[indexPath.row]
-        let url = URL(string: magazine.photo_image)
-        cell.magazineImageView.kf.setImage(with: url)
-        cell.titleLabel.text = magazine.title
-        cell.subtitleLabel.text = magazine.subtitle
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yymmdd"
-        if let date = dateFormatter.date(from: magazine.date) {
-            dateFormatter.dateFormat = "yy년 mm월 dd일"
-            let formattedDate = dateFormatter.string(from: date)
-            cell.dateLabel.text = formattedDate
-        }
+        cell.configureData(magazine)
 
         return cell
     }

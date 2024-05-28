@@ -16,6 +16,29 @@ class MagazineTableViewCell: UITableViewCell {
     @IBOutlet var subtitleLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        configureCell()
+    }
+    
+    private func configureCell() {
+        subtitleLabel.textColor = .gray
+        magazineImageView.contentMode = .scaleAspectFill
+    }
+    
+    func configureData(_ magazine: Magazine) {
+        let url = URL(string: magazine.photo_image)
+        magazineImageView.kf.setImage(with: url)
+        titleLabel.text = magazine.title
+        subtitleLabel.text = magazine.subtitle
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yymmdd"
+        if let date = dateFormatter.date(from: magazine.date) {
+            dateFormatter.dateFormat = "yy년 mm월 dd일"
+            let formattedDate = dateFormatter.string(from: date)
+            dateLabel.text = formattedDate
+        }
+    }
     
 
 }
