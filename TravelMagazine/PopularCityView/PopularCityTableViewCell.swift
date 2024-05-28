@@ -9,7 +9,7 @@ import UIKit
 
 class PopularCityTableViewCell: UITableViewCell {
     
-    static let identifier = "UITableViewCell"
+    static let identifier = "PopularCityTableViewCell"
 
     @IBOutlet var mainImageView: UIImageView!
     @IBOutlet var mainTitle: UILabel!
