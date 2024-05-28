@@ -23,10 +23,10 @@ class PopularCityViewController: UIViewController {
         cityTableView.delegate = self
         cityTableView.dataSource = self
         cityTableView.rowHeight = 120
-        let xib = UINib(nibName: "PopularCityTableViewCell", bundle: nil)
-        let xib2 = UINib(nibName: "AdTableViewCell", bundle: nil)
-        cityTableView.register(xib, forCellReuseIdentifier: "PopularCityTableViewCell")
-        cityTableView.register(xib2, forCellReuseIdentifier: "AdTableViewCell")
+        let xib = UINib(nibName: PopularCityTableViewCell.identifier, bundle: nil)
+        let xib2 = UINib(nibName: AdTableViewCell.identifier, bundle: nil)
+        cityTableView.register(xib, forCellReuseIdentifier: PopularCityTableViewCell.identifier)
+        cityTableView.register(xib2, forCellReuseIdentifier: AdTableViewCell.identifier)
     }
     
 }
@@ -41,14 +41,14 @@ extension PopularCityViewController: UITableViewDelegate, UITableViewDataSource 
         
         let data = list[indexPath.row]
         if data.ad {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "AdTableViewCell", for: indexPath) as? AdTableViewCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: AdTableViewCell.identifier, for: indexPath) as? AdTableViewCell else {
                 return UITableViewCell()
             }
             cell.titleLabel.text = data.title
             return cell
         }
         else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularCityTableViewCell", for: indexPath) as? PopularCityTableViewCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PopularCityTableViewCell.identifier, for: indexPath) as? PopularCityTableViewCell else {
                 return UITableViewCell()
             }
             cell.heartButton.tag = indexPath.row

@@ -8,6 +8,8 @@
 import UIKit
 
 class PopularCityTableViewCell: UITableViewCell {
+    
+    static let identifier = "UITableViewCell"
 
     @IBOutlet var mainImageView: UIImageView!
     @IBOutlet var mainTitle: UILabel!
