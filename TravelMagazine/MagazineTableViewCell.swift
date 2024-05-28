@@ -22,8 +22,18 @@ class MagazineTableViewCell: UITableViewCell {
     }
     
     private func configureCell() {
+        titleLabel.font = .boldSystemFont(ofSize: 20)
+        titleLabel.numberOfLines = 0
+        
         subtitleLabel.textColor = .gray
+        subtitleLabel.font = .systemFont(ofSize: 16)
+        subtitleLabel.numberOfLines = 0
+        
+        dateLabel.font = .systemFont(ofSize: 16)
+        dateLabel.textColor = .gray
+        
         magazineImageView.contentMode = .scaleAspectFill
+        magazineImageView.layer.cornerRadius = 16
     }
     
     func configureData(_ magazine: Magazine) {

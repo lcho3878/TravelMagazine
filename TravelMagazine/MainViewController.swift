@@ -20,6 +20,7 @@ class MainViewController: UIViewController {
     }
 
     private func configureUI() {
+        magazineTableView.rowHeight = UITableView.automaticDimension
         magazineTableView.delegate = self
         magazineTableView.dataSource = self
         navigationItem.title = "SeSAC Travel"
@@ -29,9 +30,9 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.frame.height / 2
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return view.frame.height / 2
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return magazinInfo.magazine.count

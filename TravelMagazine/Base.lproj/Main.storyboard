@@ -35,18 +35,18 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvp-fm-dbf">
-                                                    <rect key="frame" x="28" y="308" width="33" height="40"/>
+                                                    <rect key="frame" x="28" y="308" width="337" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="mi8-QE-Rai"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="mi8-QE-Rai"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SubTitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygq-Tt-CCw">
-                                                    <rect key="frame" x="28" y="356" width="62" height="20"/>
+                                                    <rect key="frame" x="28" y="356" width="337" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="9Sf-J6-Wxt"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="9Sf-J6-Wxt"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -63,14 +63,17 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Ygq-Tt-CCw" secondAttribute="trailing" constant="8" id="61S-md-imc"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="bQn-ME-1os" secondAttribute="trailing" constant="8" id="Ejb-TM-l30"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="bQn-ME-1os" secondAttribute="bottom" constant="8" id="Hp6-1H-Bds"/>
+                                                <constraint firstItem="bQn-ME-1os" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ygq-Tt-CCw" secondAttribute="bottom" constant="8" id="O3p-sX-Kfe"/>
                                                 <constraint firstItem="tvp-fm-dbf" firstAttribute="leading" secondItem="GVO-bS-gEU" secondAttribute="leadingMargin" constant="8" id="Zam-Pr-wNN"/>
                                                 <constraint firstItem="Ygq-Tt-CCw" firstAttribute="leading" secondItem="GVO-bS-gEU" secondAttribute="leadingMargin" constant="8" id="f8w-dl-8df"/>
                                                 <constraint firstItem="JtN-Qq-dyh" firstAttribute="leading" secondItem="GVO-bS-gEU" secondAttribute="leadingMargin" constant="32" id="fBm-o6-zmX"/>
                                                 <constraint firstItem="tvp-fm-dbf" firstAttribute="top" secondItem="JtN-Qq-dyh" secondAttribute="bottom" constant="8" id="m9F-WM-IbT"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="JtN-Qq-dyh" secondAttribute="trailing" constant="32" id="rAD-8m-j8S"/>
                                                 <constraint firstItem="JtN-Qq-dyh" firstAttribute="top" secondItem="GVO-bS-gEU" secondAttribute="topMargin" id="soE-GX-iFK"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="tvp-fm-dbf" secondAttribute="trailing" constant="8" id="v2g-wc-xrK"/>
                                                 <constraint firstItem="Ygq-Tt-CCw" firstAttribute="top" secondItem="tvp-fm-dbf" secondAttribute="bottom" constant="8" id="wNO-fJ-tX1"/>
                                             </constraints>
                                         </tableViewCellContentView>
