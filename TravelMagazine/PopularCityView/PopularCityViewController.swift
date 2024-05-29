@@ -8,7 +8,7 @@
 import UIKit
 
 class PopularCityViewController: UIViewController {
-//    private let list = CityInfo().city
+    private let list = CityInfo().city
     
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var segmentControl: UISegmentedControl!
@@ -43,14 +43,15 @@ class PopularCityViewController: UIViewController {
 extension PopularCityViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PopularCityTableViewCell.identifier, for: indexPath) as? PopularCityTableViewCell else {
             return UITableViewCell()
         }
-        
+        let data = list[indexPath.row]
+        cell.configureData(data)
         
         return cell
     }
