@@ -27,6 +27,7 @@
 		54D3547F2C03809600C970B1 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D3547E2C03809600C970B1 /* Restaurant.swift */; };
 		54D354812C0380EA00C970B1 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D354802C0380EA00C970B1 /* RestaurantViewController.swift */; };
 		54D354832C0381C900C970B1 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D354822C0381C900C970B1 /* RestaurantCell.swift */; };
+		54D6AD7D2C07187000386E45 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D6AD7C2C07187000386E45 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		54D3547E2C03809600C970B1 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		54D354802C0380EA00C970B1 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		54D354822C0381C900C970B1 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
+		54D6AD7C2C07187000386E45 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,10 +112,19 @@
 				54D354822C0381C900C970B1 /* RestaurantCell.swift */,
 				54D3546A2C01A22700C970B1 /* Assets.xcassets */,
 				54063B782C04669700A82864 /* PopularCityView */,
+				54D6AD7B2C07186200386E45 /* DetailView */,
 				54D3546C2C01A22700C970B1 /* LaunchScreen.storyboard */,
 				54D3546F2C01A22700C970B1 /* Info.plist */,
 			);
 			path = TravelMagazine;
+			sourceTree = "<group>";
+		};
+		54D6AD7B2C07186200386E45 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				54D6AD7C2C07187000386E45 /* DetailViewController.swift */,
+			);
+			path = DetailView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 				54D354622C01A22600C970B1 /* AppDelegate.swift in Sources */,
 				54D354642C01A22600C970B1 /* SceneDelegate.swift in Sources */,
 				54063B7C2C04680000A82864 /* PopularCityViewController.swift in Sources */,
+				54D6AD7D2C07187000386E45 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

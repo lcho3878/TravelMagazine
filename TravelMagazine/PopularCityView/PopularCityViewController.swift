@@ -82,7 +82,15 @@ extension PopularCityViewController: UITableViewDelegate, UITableViewDataSource 
         cityTableView.reloadData()
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let ad = list[indexPath.row].ad
+        if ad {
+        }
+        else {
+            let detailVC = storyboard?.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
+            navigationController?.pushViewController(detailVC, animated: true)
+        }
+    }
     
     
 }
