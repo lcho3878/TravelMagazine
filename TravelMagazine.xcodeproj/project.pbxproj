@@ -12,6 +12,8 @@
 		54063B7F2C04688800A82864 /* DetailCityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54063B7E2C04688800A82864 /* DetailCityTableViewCell.xib */; };
 		54063B802C04688800A82864 /* DetailCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54063B7D2C04688800A82864 /* DetailCityTableViewCell.swift */; };
 		54063B822C046AA300A82864 /* TravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54063B812C046AA300A82864 /* TravelModel.swift */; };
+		54352ABE2C072BD70017F61E /* PopularCityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54352ABD2C072BD70017F61E /* PopularCityTableViewCell.xib */; };
+		54352ABF2C072BD70017F61E /* PopularCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54352ABC2C072BD70017F61E /* PopularCityTableViewCell.swift */; };
 		546ED9BC2C04712900E0C27B /* AdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546ED9BA2C04712900E0C27B /* AdTableViewCell.swift */; };
 		546ED9BD2C04712900E0C27B /* AdTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 546ED9BB2C04712900E0C27B /* AdTableViewCell.xib */; };
 		54B2A6BF2C0722F900F0F2D9 /* PopularCity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B2A6BE2C0722F900F0F2D9 /* PopularCity.storyboard */; };
@@ -41,6 +43,8 @@
 		54063B7D2C04688800A82864 /* DetailCityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCityTableViewCell.swift; sourceTree = "<group>"; };
 		54063B7E2C04688800A82864 /* DetailCityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCityTableViewCell.xib; sourceTree = "<group>"; };
 		54063B812C046AA300A82864 /* TravelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelModel.swift; sourceTree = "<group>"; };
+		54352ABC2C072BD70017F61E /* PopularCityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCityTableViewCell.swift; sourceTree = "<group>"; };
+		54352ABD2C072BD70017F61E /* PopularCityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCityTableViewCell.xib; sourceTree = "<group>"; };
 		546ED9BA2C04712900E0C27B /* AdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTableViewCell.swift; sourceTree = "<group>"; };
 		546ED9BB2C04712900E0C27B /* AdTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdTableViewCell.xib; sourceTree = "<group>"; };
 		54B2A6BE2C0722F900F0F2D9 /* PopularCity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopularCity.storyboard; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 			children = (
 				54B2A6BE2C0722F900F0F2D9 /* PopularCity.storyboard */,
 				54B2A6C02C07234200F0F2D9 /* PopularCityViewController.swift */,
+				54352ABC2C072BD70017F61E /* PopularCityTableViewCell.swift */,
+				54352ABD2C072BD70017F61E /* PopularCityTableViewCell.xib */,
 			);
 			path = PopularCityView;
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 				54D3546B2C01A22700C970B1 /* Assets.xcassets in Resources */,
 				54063B7A2C0466AB00A82864 /* DetailCity.storyboard in Resources */,
 				546ED9BD2C04712900E0C27B /* AdTableViewCell.xib in Resources */,
+				54352ABE2C072BD70017F61E /* PopularCityTableViewCell.xib in Resources */,
 				54D3546E2C01A22700C970B1 /* Base in Resources */,
 				54063B7F2C04688800A82864 /* DetailCityTableViewCell.xib in Resources */,
 				54D354692C01A22600C970B1 /* Base in Resources */,
@@ -259,6 +266,7 @@
 				54063B802C04688800A82864 /* DetailCityTableViewCell.swift in Sources */,
 				54B2A6C92C07249600F0F2D9 /* City.swift in Sources */,
 				54D354662C01A22600C970B1 /* MainViewController.swift in Sources */,
+				54352ABF2C072BD70017F61E /* PopularCityTableViewCell.swift in Sources */,
 				54063B822C046AA300A82864 /* TravelModel.swift in Sources */,
 				54D354812C0380EA00C970B1 /* RestaurantViewController.swift in Sources */,
 				54B2A6C12C07234200F0F2D9 /* PopularCityViewController.swift in Sources */,

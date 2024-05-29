@@ -16,9 +16,52 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="dYL-zL-PTe">
+                                <rect key="frame" x="0.0" y="59" width="393" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6R4-ET-lYu"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="EAy-oL-uFc"/>
+                                </connections>
+                            </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Dbl-1X-R8A">
+                                <rect key="frame" x="8" y="125" width="377" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SHJ-r8-zg0"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Q7x-26-93m">
+                                <rect key="frame" x="0.0" y="163" width="393" height="655"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Q7x-26-93m" firstAttribute="top" secondItem="Dbl-1X-R8A" secondAttribute="bottom" constant="8" id="22i-pJ-bNM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Q7x-26-93m" secondAttribute="trailing" id="2zC-G7-ZCT"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Dbl-1X-R8A" secondAttribute="trailing" constant="8" id="3hH-hK-dZf"/>
+                            <constraint firstItem="dYL-zL-PTe" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="8V4-Nf-TBk"/>
+                            <constraint firstItem="Q7x-26-93m" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="AAu-Gp-e5s"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Q7x-26-93m" secondAttribute="bottom" id="OIU-N2-wFC"/>
+                            <constraint firstItem="Dbl-1X-R8A" firstAttribute="top" secondItem="dYL-zL-PTe" secondAttribute="bottom" constant="16" id="bRb-uw-nMt"/>
+                            <constraint firstItem="Dbl-1X-R8A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="ge9-bm-Jmy"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dYL-zL-PTe" secondAttribute="trailing" id="k4B-Lh-pDe"/>
+                            <constraint firstItem="dYL-zL-PTe" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="yZv-fW-bft"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityTableView" destination="Q7x-26-93m" id="NQn-RQ-Gxx"/>
+                        <outlet property="searchBar" destination="dYL-zL-PTe" id="Rkr-YE-A0W"/>
+                        <outlet property="segmentControl" destination="Dbl-1X-R8A" id="rCj-bK-p4L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
