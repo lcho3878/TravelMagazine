@@ -12,7 +12,7 @@
         <!--도시 상세 정보-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="PopularCityViewController" customModule="TravelMagazine" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="DetailCityViewController" customModule="TravelMagazine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="도시 상세 정보" id="xpQ-vm-vnn"/>
                     <connections>
-                        <outlet property="cityTableView" destination="RGw-oV-5A2" id="Yk9-fp-NU9"/>
+                        <outlet property="detailCityTableView" destination="RGw-oV-5A2" id="VpQ-MM-87q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		54063B7A2C0466AB00A82864 /* PopularCity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54063B792C0466AB00A82864 /* PopularCity.storyboard */; };
-		54063B7C2C04680000A82864 /* PopularCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54063B7B2C04680000A82864 /* PopularCityViewController.swift */; };
-		54063B7F2C04688800A82864 /* PopularCityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54063B7E2C04688800A82864 /* PopularCityTableViewCell.xib */; };
-		54063B802C04688800A82864 /* PopularCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54063B7D2C04688800A82864 /* PopularCityTableViewCell.swift */; };
+		54063B7A2C0466AB00A82864 /* DetailCity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54063B792C0466AB00A82864 /* DetailCity.storyboard */; };
+		54063B7C2C04680000A82864 /* DetailCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54063B7B2C04680000A82864 /* DetailCityViewController.swift */; };
+		54063B7F2C04688800A82864 /* DetailCityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54063B7E2C04688800A82864 /* DetailCityTableViewCell.xib */; };
+		54063B802C04688800A82864 /* DetailCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54063B7D2C04688800A82864 /* DetailCityTableViewCell.swift */; };
 		54063B822C046AA300A82864 /* TravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54063B812C046AA300A82864 /* TravelModel.swift */; };
 		546ED9BC2C04712900E0C27B /* AdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546ED9BA2C04712900E0C27B /* AdTableViewCell.swift */; };
 		546ED9BD2C04712900E0C27B /* AdTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 546ED9BB2C04712900E0C27B /* AdTableViewCell.xib */; };
@@ -32,10 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		54063B792C0466AB00A82864 /* PopularCity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopularCity.storyboard; sourceTree = "<group>"; };
-		54063B7B2C04680000A82864 /* PopularCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCityViewController.swift; sourceTree = "<group>"; };
-		54063B7D2C04688800A82864 /* PopularCityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCityTableViewCell.swift; sourceTree = "<group>"; };
-		54063B7E2C04688800A82864 /* PopularCityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCityTableViewCell.xib; sourceTree = "<group>"; };
+		54063B792C0466AB00A82864 /* DetailCity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailCity.storyboard; sourceTree = "<group>"; };
+		54063B7B2C04680000A82864 /* DetailCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCityViewController.swift; sourceTree = "<group>"; };
+		54063B7D2C04688800A82864 /* DetailCityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCityTableViewCell.swift; sourceTree = "<group>"; };
+		54063B7E2C04688800A82864 /* DetailCityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCityTableViewCell.xib; sourceTree = "<group>"; };
 		54063B812C046AA300A82864 /* TravelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelModel.swift; sourceTree = "<group>"; };
 		546ED9BA2C04712900E0C27B /* AdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTableViewCell.swift; sourceTree = "<group>"; };
 		546ED9BB2C04712900E0C27B /* AdTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdTableViewCell.xib; sourceTree = "<group>"; };
@@ -72,10 +72,10 @@
 		54063B782C04669700A82864 /* PopularCityView */ = {
 			isa = PBXGroup;
 			children = (
-				54063B792C0466AB00A82864 /* PopularCity.storyboard */,
-				54063B7D2C04688800A82864 /* PopularCityTableViewCell.swift */,
-				54063B7E2C04688800A82864 /* PopularCityTableViewCell.xib */,
-				54063B7B2C04680000A82864 /* PopularCityViewController.swift */,
+				54063B792C0466AB00A82864 /* DetailCity.storyboard */,
+				54063B7D2C04688800A82864 /* DetailCityTableViewCell.swift */,
+				54063B7E2C04688800A82864 /* DetailCityTableViewCell.xib */,
+				54063B7B2C04680000A82864 /* DetailCityViewController.swift */,
 				54063B812C046AA300A82864 /* TravelModel.swift */,
 				546ED9BA2C04712900E0C27B /* AdTableViewCell.swift */,
 				546ED9BB2C04712900E0C27B /* AdTableViewCell.xib */,
@@ -203,10 +203,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				54D3546B2C01A22700C970B1 /* Assets.xcassets in Resources */,
-				54063B7A2C0466AB00A82864 /* PopularCity.storyboard in Resources */,
+				54063B7A2C0466AB00A82864 /* DetailCity.storyboard in Resources */,
 				546ED9BD2C04712900E0C27B /* AdTableViewCell.xib in Resources */,
 				54D3546E2C01A22700C970B1 /* Base in Resources */,
-				54063B7F2C04688800A82864 /* PopularCityTableViewCell.xib in Resources */,
+				54063B7F2C04688800A82864 /* DetailCityTableViewCell.xib in Resources */,
 				54D354692C01A22600C970B1 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,7 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54D354832C0381C900C970B1 /* RestaurantCell.swift in Sources */,
-				54063B802C04688800A82864 /* PopularCityTableViewCell.swift in Sources */,
+				54063B802C04688800A82864 /* DetailCityTableViewCell.swift in Sources */,
 				54D354662C01A22600C970B1 /* MainViewController.swift in Sources */,
 				54063B822C046AA300A82864 /* TravelModel.swift in Sources */,
 				54D354812C0380EA00C970B1 /* RestaurantViewController.swift in Sources */,
@@ -231,7 +231,7 @@
 				546ED9BC2C04712900E0C27B /* AdTableViewCell.swift in Sources */,
 				54D354622C01A22600C970B1 /* AppDelegate.swift in Sources */,
 				54D354642C01A22600C970B1 /* SceneDelegate.swift in Sources */,
-				54063B7C2C04680000A82864 /* PopularCityViewController.swift in Sources */,
+				54063B7C2C04680000A82864 /* DetailCityViewController.swift in Sources */,
 				54D6AD7D2C07187000386E45 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

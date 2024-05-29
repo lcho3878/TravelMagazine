@@ -265,10 +265,10 @@
             </objects>
             <point key="canvasLocation" x="54.198473282442748" y="-34.507042253521128"/>
         </scene>
-        <!--PopularCity-->
+        <!--DetailCity-->
         <scene sceneID="zoz-n4-d1C">
             <objects>
-                <viewControllerPlaceholder storyboardName="PopularCity" id="O3P-Hx-qIZ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="DetailCity" id="O3P-Hx-qIZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ReR-pr-nkP"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="01j-pw-weC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -7,9 +7,9 @@
 
 import UIKit
 
-class PopularCityTableViewCell: UITableViewCell {
+class DetailCityTableViewCell: UITableViewCell {
     
-    static let identifier = "PopularCityTableViewCell"
+    static let identifier = "DetailCityTableViewCell"
 
     @IBOutlet var mainImageView: UIImageView!
     @IBOutlet var mainTitle: UILabel!
