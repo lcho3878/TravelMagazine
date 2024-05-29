@@ -20,6 +20,7 @@ class PopularCityViewController: UIViewController {
         configureUI()
         configureSegmentControl()
         configureTableView()
+        searchBar.delegate = self
     }
     
     private func configureUI() {
@@ -41,20 +42,30 @@ class PopularCityViewController: UIViewController {
     }
     
     private func actionWithTitle(_ title: String) -> UIAction {
-        let action = UIAction(title: title) { action in
-            self.filterWithSegmentControl(action.title)
+        let action = UIAction(title: title) { _ in
+            self.filterWithSegmentControl()
             self.cityTableView.reloadData()
         }
         return action
     }
     
-    private func filterWithSegmentControl(_ keyword: String) {
-        switch keyword {
+    private func filterWithSegmentControl() {
+        guard let category = segmentControl.titleForSegment(at: segmentControl.selectedSegmentIndex) else { return }
+        switch category {
         case "모두": filterLIst = list
         case "국내": filterLIst = list.filter { $0.domestic_travel == true }
         case "해외": filterLIst = list.filter { $0.domestic_travel == false }
         default: break
         }
+        guard let keyword = searchBar.text, keyword != "" else { return }
+        filterWithKeyword(keyword)
+    }
+    
+    private func filterWithKeyword(_ keyword: String) {
+        guard keyword != "" else {
+            return
+        }
+        filterLIst = filterLIst.filter { $0.city_name.contains(keyword) || $0.city_english_name.contains(keyword) || $0.city_explain.contains(keyword)}
     }
     
     private func configureTableView() {
@@ -84,4 +95,17 @@ extension PopularCityViewController: UITableViewDelegate, UITableViewDataSource 
         return cell
     }
     
+}
+
+extension PopularCityViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard searchText != "" else {
+            filterWithSegmentControl()
+            cityTableView.reloadData()
+            return
+        }
+        filterWithSegmentControl()
+        filterWithKeyword(searchText)
+        cityTableView.reloadData()
+    }
 }
