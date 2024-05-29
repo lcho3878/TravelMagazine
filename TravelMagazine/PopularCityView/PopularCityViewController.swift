@@ -85,6 +85,11 @@ extension PopularCityViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let ad = list[indexPath.row].ad
         if ad {
+            let adVC = storyboard?.instantiateViewController(withIdentifier: "AdViewController") as! AdViewController
+            let adNav = UINavigationController(rootViewController: adVC)
+            adNav.modalPresentationStyle = .fullScreen
+            adNav.modalTransitionStyle = .flipHorizontal
+            present(adNav, animated: true)
         }
         else {
             let detailVC = storyboard?.instantiateViewController(identifier: "DetailViewController") as! DetailViewController

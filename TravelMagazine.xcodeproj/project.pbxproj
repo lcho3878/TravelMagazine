@@ -28,6 +28,7 @@
 		54D354812C0380EA00C970B1 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D354802C0380EA00C970B1 /* RestaurantViewController.swift */; };
 		54D354832C0381C900C970B1 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D354822C0381C900C970B1 /* RestaurantCell.swift */; };
 		54D6AD7D2C07187000386E45 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D6AD7C2C07187000386E45 /* DetailViewController.swift */; };
+		54D6AD802C071DB500386E45 /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D6AD7F2C071DB500386E45 /* AdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		54D354802C0380EA00C970B1 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		54D354822C0381C900C970B1 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		54D6AD7C2C07187000386E45 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		54D6AD7F2C071DB500386E45 /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				54D3546A2C01A22700C970B1 /* Assets.xcassets */,
 				54063B782C04669700A82864 /* PopularCityView */,
 				54D6AD7B2C07186200386E45 /* DetailView */,
+				54D6AD7E2C071DA600386E45 /* AdView */,
 				54D3546C2C01A22700C970B1 /* LaunchScreen.storyboard */,
 				54D3546F2C01A22700C970B1 /* Info.plist */,
 			);
@@ -125,6 +128,14 @@
 				54D6AD7C2C07187000386E45 /* DetailViewController.swift */,
 			);
 			path = DetailView;
+			sourceTree = "<group>";
+		};
+		54D6AD7E2C071DA600386E45 /* AdView */ = {
+			isa = PBXGroup;
+			children = (
+				54D6AD7F2C071DB500386E45 /* AdViewController.swift */,
+			);
+			path = AdView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +224,7 @@
 				54063B822C046AA300A82864 /* TravelModel.swift in Sources */,
 				54D354812C0380EA00C970B1 /* RestaurantViewController.swift in Sources */,
 				54D354782C01A28D00C970B1 /* Magazine.swift in Sources */,
+				54D6AD802C071DB500386E45 /* AdViewController.swift in Sources */,
 				54D354762C01A27D00C970B1 /* MagazineInfo.swift in Sources */,
 				54D3547F2C03809600C970B1 /* Restaurant.swift in Sources */,
 				54D3547A2C01A3D400C970B1 /* MagazineTableViewCell.swift in Sources */,

@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="7625" y="-204"/>
         </scene>
-        <!--View Controller-->
+        <!--Ad View Controller-->
         <scene sceneID="BIx-Sj-sdA">
             <objects>
-                <viewController id="2hY-tm-hK3" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdViewController" id="2hY-tm-hK3" customClass="AdViewController" customModule="TravelMagazine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cAH-6e-pcQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
