@@ -9,6 +9,7 @@ import UIKit
 
 class PopularCityViewController: UIViewController {
     private let list = CityInfo().city
+    private var filterLIst = [City]()
     
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var segmentControl: UISegmentedControl!
@@ -17,16 +18,43 @@ class PopularCityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        configureSegmentControl()
         configureTableView()
     }
     
     private func configureUI() {
         navigationItem.title = "인기 도시"
-        
-
+        filterLIst = list
+    }
+    
+    private func configureSegmentControl() {
         segmentControl.setTitle("모두", forSegmentAt: 0)
         segmentControl.setTitle("국내", forSegmentAt: 1)
         segmentControl.insertSegment(withTitle: "해외", at: 2, animated: false)
+        
+        let action1 = actionWithTitle("모두")
+        let action2 = actionWithTitle("국내")
+        let action3 = actionWithTitle("해외")
+        segmentControl.setAction(action1, forSegmentAt: 0)
+        segmentControl.setAction(action2, forSegmentAt: 1)
+        segmentControl.setAction(action3, forSegmentAt: 2)
+    }
+    
+    private func actionWithTitle(_ title: String) -> UIAction {
+        let action = UIAction(title: title) { action in
+            self.filterWithSegmentControl(action.title)
+            self.cityTableView.reloadData()
+        }
+        return action
+    }
+    
+    private func filterWithSegmentControl(_ keyword: String) {
+        switch keyword {
+        case "모두": filterLIst = list
+        case "국내": filterLIst = list.filter { $0.domestic_travel == true }
+        case "해외": filterLIst = list.filter { $0.domestic_travel == false }
+        default: break
+        }
     }
     
     private func configureTableView() {
@@ -43,14 +71,14 @@ class PopularCityViewController: UIViewController {
 extension PopularCityViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
+        return filterLIst.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PopularCityTableViewCell.identifier, for: indexPath) as? PopularCityTableViewCell else {
             return UITableViewCell()
         }
-        let data = list[indexPath.row]
+        let data = filterLIst[indexPath.row]
         cell.configureData(data)
         
         return cell
