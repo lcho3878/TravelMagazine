@@ -44,6 +44,8 @@ class RestaurantMapViewController: UIViewController {
     private func configureNavigationItems() {
         let barButton = UIBarButtonItem(title: "카테고리 선택", style: .plain, target: self, action: #selector(barButtonClick))
         navigationItem.rightBarButtonItem = barButton
+        navigationController?.navigationBar.tintColor = .black
+        
         navigationItem.title = "모두"
     }
     
