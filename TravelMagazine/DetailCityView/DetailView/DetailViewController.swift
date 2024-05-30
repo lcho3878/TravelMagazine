@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DetailViewController: UIViewController {
     
     var data: Travel?
     
+    @IBOutlet var mainImageVIew: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     
@@ -28,6 +30,12 @@ class DetailViewController: UIViewController {
     }
     
     private func configureUI() {
+        if let url = data?.url {
+            mainImageVIew.kf.setImage(with: url)
+        }
+        mainImageVIew.contentMode = .scaleAspectFill
+        mainImageVIew.layer.cornerRadius = mainImageVIew.frame.width / 2
+        
         titleLabel.text = data?.title
         titleLabel.textAlignment = .center
         titleLabel.font = UIFont.boldSystemFont(ofSize: 17)
@@ -36,6 +44,8 @@ class DetailViewController: UIViewController {
         descriptionLabel.text = data?.description
         descriptionLabel.font = .systemFont(ofSize: 13)
         descriptionLabel.textColor = .lightGray
+        
+        
     }
   
 

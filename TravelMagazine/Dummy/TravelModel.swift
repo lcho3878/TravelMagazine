@@ -14,6 +14,12 @@ struct Travel {
     let save: Int?
     var like: Bool?
     var ad: Bool
+    
+    var url: URL? {
+        guard travel_image != nil else { return nil }
+        guard let url = URL(string: travel_image!) else { return nil }
+        return url
+    }
 }
 
 struct TravelInfo {

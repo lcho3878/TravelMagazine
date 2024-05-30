@@ -100,6 +100,7 @@
                     <navigationItem key="navigationItem" id="jAG-1f-XYS"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="gC5-7g-Jf9" id="ZZW-GL-KCT"/>
+                        <outlet property="mainImageVIew" destination="z8N-Op-7EE" id="Ipx-TW-yL4"/>
                         <outlet property="titleLabel" destination="1J5-71-VbJ" id="e1b-yf-YwP"/>
                     </connections>
                 </viewController>
