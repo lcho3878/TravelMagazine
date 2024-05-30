@@ -226,6 +226,21 @@
             </objects>
             <point key="canvasLocation" x="1720" y="1237"/>
         </scene>
+        <!--Restaurant Map View Controller-->
+        <scene sceneID="wUc-4Z-zhE">
+            <objects>
+                <viewController storyboardIdentifier="RestaurantMapViewController" id="fK4-Dp-dH1" customClass="RestaurantMapViewController" customModule="TravelMagazine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lXs-5T-B61">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="KXm-we-ube"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zRs-Cc-Rn6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2451" y="1237"/>
+        </scene>
         <!--Item-->
         <scene sceneID="Jjo-HJ-57b">
             <objects>
@@ -286,11 +301,11 @@
             </objects>
             <point key="canvasLocation" x="2451.1450381679388" y="182.3943661971831"/>
         </scene>
-        <!--Item-->
+        <!--레스토랑-->
         <scene sceneID="tW2-bO-hZZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eC9-LG-Sqi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="iAU-GI-gWx"/>
+                    <tabBarItem key="tabBarItem" title="레스토랑" id="iAU-GI-gWx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xVC-Eq-dFw">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>

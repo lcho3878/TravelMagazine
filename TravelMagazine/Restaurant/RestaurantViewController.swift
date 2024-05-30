@@ -32,7 +32,13 @@ class RestaurantViewController: UITableViewController, UISearchBarDelegate {
         for category in categories {
             navigationItem.leftBarButtonItems?.append(filteringButton(category))
         }
-        
+        let mapBarButton = UIBarButtonItem(title: "지도", style: .plain, target: self, action: #selector(mapBarButtonClicked))
+        navigationItem.rightBarButtonItem = mapBarButton
+    }
+    
+    @objc func mapBarButtonClicked() {
+        let mapVC = storyboard?.instantiateViewController(withIdentifier: "RestaurantMapViewController") as! RestaurantMapViewController
+        navigationController?.pushViewController(mapVC, animated: true)
     }
     
     func filteringButton(_ title: String) -> UIBarButtonItem {

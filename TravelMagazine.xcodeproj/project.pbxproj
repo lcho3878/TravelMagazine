@@ -12,6 +12,7 @@
 		54063B7F2C04688800A82864 /* DetailCityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54063B7E2C04688800A82864 /* DetailCityTableViewCell.xib */; };
 		54063B802C04688800A82864 /* DetailCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54063B7D2C04688800A82864 /* DetailCityTableViewCell.swift */; };
 		54063B822C046AA300A82864 /* TravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54063B812C046AA300A82864 /* TravelModel.swift */; };
+		541973B32C08650900A6245F /* RestaurantMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541973B22C08650900A6245F /* RestaurantMapViewController.swift */; };
 		54352ABE2C072BD70017F61E /* PopularCityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54352ABD2C072BD70017F61E /* PopularCityTableViewCell.xib */; };
 		54352ABF2C072BD70017F61E /* PopularCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54352ABC2C072BD70017F61E /* PopularCityTableViewCell.swift */; };
 		546ED9BC2C04712900E0C27B /* AdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546ED9BA2C04712900E0C27B /* AdTableViewCell.swift */; };
@@ -43,6 +44,7 @@
 		54063B7D2C04688800A82864 /* DetailCityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCityTableViewCell.swift; sourceTree = "<group>"; };
 		54063B7E2C04688800A82864 /* DetailCityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCityTableViewCell.xib; sourceTree = "<group>"; };
 		54063B812C046AA300A82864 /* TravelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelModel.swift; sourceTree = "<group>"; };
+		541973B22C08650900A6245F /* RestaurantMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMapViewController.swift; sourceTree = "<group>"; };
 		54352ABC2C072BD70017F61E /* PopularCityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCityTableViewCell.swift; sourceTree = "<group>"; };
 		54352ABD2C072BD70017F61E /* PopularCityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCityTableViewCell.xib; sourceTree = "<group>"; };
 		546ED9BA2C04712900E0C27B /* AdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTableViewCell.swift; sourceTree = "<group>"; };
@@ -94,6 +96,17 @@
 				54D6AD7E2C071DA600386E45 /* AdView */,
 			);
 			path = DetailCityView;
+			sourceTree = "<group>";
+		};
+		541973B12C0864EE00A6245F /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				54D3547E2C03809600C970B1 /* Restaurant.swift */,
+				54D354802C0380EA00C970B1 /* RestaurantViewController.swift */,
+				54D354822C0381C900C970B1 /* RestaurantCell.swift */,
+				541973B22C08650900A6245F /* RestaurantMapViewController.swift */,
+			);
+			path = Restaurant;
 			sourceTree = "<group>";
 		};
 		54B2A6BD2C0722E800F0F2D9 /* PopularCityView */ = {
@@ -152,9 +165,7 @@
 				54B2A6C62C07243500F0F2D9 /* Dummy */,
 				54B2A6C72C07245D00F0F2D9 /* Model */,
 				54D354672C01A22600C970B1 /* Main.storyboard */,
-				54D3547E2C03809600C970B1 /* Restaurant.swift */,
-				54D354802C0380EA00C970B1 /* RestaurantViewController.swift */,
-				54D354822C0381C900C970B1 /* RestaurantCell.swift */,
+				541973B12C0864EE00A6245F /* Restaurant */,
 				54D3546A2C01A22700C970B1 /* Assets.xcassets */,
 				54063B782C04669700A82864 /* DetailCityView */,
 				54B2A6BD2C0722E800F0F2D9 /* PopularCityView */,
@@ -276,6 +287,7 @@
 				54D3547F2C03809600C970B1 /* Restaurant.swift in Sources */,
 				54D3547A2C01A3D400C970B1 /* MagazineTableViewCell.swift in Sources */,
 				546ED9BC2C04712900E0C27B /* AdTableViewCell.swift in Sources */,
+				541973B32C08650900A6245F /* RestaurantMapViewController.swift in Sources */,
 				54B2A6C52C07242C00F0F2D9 /* CityInfo.swift in Sources */,
 				54D354622C01A22600C970B1 /* AppDelegate.swift in Sources */,
 				54D354642C01A22600C970B1 /* SceneDelegate.swift in Sources */,
