@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -233,9 +234,24 @@
                     <view key="view" contentMode="scaleToFill" id="lXs-5T-B61">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pH7-ty-hff">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="KXm-we-ube"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pH7-ty-hff" firstAttribute="leading" secondItem="KXm-we-ube" secondAttribute="leading" id="9yz-Bo-QJn"/>
+                            <constraint firstItem="pH7-ty-hff" firstAttribute="bottom" secondItem="KXm-we-ube" secondAttribute="bottom" id="ARI-f2-YVg"/>
+                            <constraint firstItem="pH7-ty-hff" firstAttribute="trailing" secondItem="KXm-we-ube" secondAttribute="trailing" id="Pst-I6-ht6"/>
+                            <constraint firstItem="pH7-ty-hff" firstAttribute="top" secondItem="KXm-we-ube" secondAttribute="top" id="dtb-b3-GKa"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="pH7-ty-hff" id="RNz-UU-a6l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRs-Cc-Rn6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -271,10 +287,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="eC9-LG-Sqi" kind="relationship" relationship="viewControllers" id="Ge8-cu-bw4"/>
                         <segue destination="O3P-Hx-qIZ" kind="relationship" relationship="viewControllers" id="Hc6-hO-sxz"/>
                         <segue destination="nw0-Jj-wBD" kind="relationship" relationship="viewControllers" id="2NI-x1-JTx"/>
                         <segue destination="tvt-Gn-IZc" kind="relationship" relationship="viewControllers" id="454-uW-OcY"/>
-                        <segue destination="eC9-LG-Sqi" kind="relationship" relationship="viewControllers" id="Ge8-cu-bw4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tgq-Rr-0qD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
