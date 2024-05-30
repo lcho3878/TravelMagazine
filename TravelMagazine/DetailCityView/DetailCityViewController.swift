@@ -93,6 +93,7 @@ extension DetailCityViewController: UITableViewDelegate, UITableViewDataSource {
         }
         else {
             let detailVC = storyboard?.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
+            detailVC.data = list[indexPath.row]
             navigationController?.pushViewController(detailVC, animated: true)
         }
     }

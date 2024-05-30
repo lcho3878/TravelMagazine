@@ -256,9 +256,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="O3P-Hx-qIZ" kind="relationship" relationship="viewControllers" id="Hc6-hO-sxz"/>
                         <segue destination="nw0-Jj-wBD" kind="relationship" relationship="viewControllers" id="2NI-x1-JTx"/>
                         <segue destination="tvt-Gn-IZc" kind="relationship" relationship="viewControllers" id="454-uW-OcY"/>
-                        <segue destination="O3P-Hx-qIZ" kind="relationship" relationship="viewControllers" id="Hc6-hO-sxz"/>
                         <segue destination="eC9-LG-Sqi" kind="relationship" relationship="viewControllers" id="Ge8-cu-bw4"/>
                     </connections>
                 </tabBarController>

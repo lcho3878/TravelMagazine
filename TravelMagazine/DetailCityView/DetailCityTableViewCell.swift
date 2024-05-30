@@ -25,7 +25,6 @@ class DetailCityTableViewCell: UITableViewCell {
     
     func configureLayout() {
         mainTitle.font = .boldSystemFont(ofSize: 17)
-        
         subTitle.textColor = .lightGray
         subTitle.font = .systemFont(ofSize: 13)
         

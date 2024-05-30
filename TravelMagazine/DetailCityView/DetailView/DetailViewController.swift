@@ -8,18 +8,34 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
+    var data: Travel?
+    
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationItems()
+        configureUI()
         
     }
     
     private func configureNavigationItems() {
-        navigationItem.title = "관광지화면"
+        navigationItem.title = data?.title
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.topItem?.title = ""
+    }
+    
+    private func configureUI() {
+        titleLabel.text = data?.title
+        titleLabel.textAlignment = .center
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 17)
+        
+        
+        descriptionLabel.text = data?.description
+        descriptionLabel.font = .systemFont(ofSize: 13)
+        descriptionLabel.textColor = .lightGray
     }
   
 
