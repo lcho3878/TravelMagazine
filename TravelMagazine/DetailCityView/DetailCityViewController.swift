@@ -83,9 +83,10 @@ extension DetailCityViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let ad = list[indexPath.row].ad
-        if ad {
+        let data = list[indexPath.row]
+        if data.ad {
             let adVC = storyboard?.instantiateViewController(withIdentifier: "AdViewController") as! AdViewController
+            adVC.data = data
             let adNav = UINavigationController(rootViewController: adVC)
             adNav.modalPresentationStyle = .fullScreen
             adNav.modalTransitionStyle = .flipHorizontal
@@ -93,7 +94,7 @@ extension DetailCityViewController: UITableViewDelegate, UITableViewDataSource {
         }
         else {
             let detailVC = storyboard?.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
-            detailVC.data = list[indexPath.row]
+            detailVC.data = data
             navigationController?.pushViewController(detailVC, animated: true)
         }
     }

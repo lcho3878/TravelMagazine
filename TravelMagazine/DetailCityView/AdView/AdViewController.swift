@@ -9,13 +9,15 @@ import UIKit
 
 class AdViewController: UIViewController {
     
+    var data: Travel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationItems()
     }
     
     private func configureNavigationItems() {
-        navigationItem.title = "광고 화면"
+        navigationItem.title = data?.title
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(backVC))
         navigationItem.leftBarButtonItem?.tintColor = .black
     }
