@@ -32,28 +32,28 @@ class RestaurantMapViewController: UIViewController {
     @IBOutlet var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureMapView()
+        configureNavigationItems()
+    }
+    
+    private func configureMapView() {
         mapView.region = MKCoordinateRegion(center: center, latitudinalMeters: 1000, longitudinalMeters: 1000)
-//        mapView.addAnnotations(annotaions)
-        
-        let barButton = UIBarButtonItem(title: "모두", style: .plain, target: self, action: #selector(barButtonClick))
+        mapView.addAnnotations(annotaions)
+    }
+    
+    private func configureNavigationItems() {
+        let barButton = UIBarButtonItem(title: "카테고리 선택", style: .plain, target: self, action: #selector(barButtonClick))
         navigationItem.rightBarButtonItem = barButton
+        navigationItem.title = "모두"
     }
     
     @objc func barButtonClick() {
-//        mapView.removeAnnotations(annotaions)
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let action1 = UIAlertAction(title: "모두", style: .default) { a in
-            self.makeAnnotations(a.title ?? "")
+        let categories = ["모두", "한식", "일식", "중식", "경양식", "분식", "카페"]
+        for category in categories {
+            alert.addAction(makeAction(category))
         }
-        let action2 = UIAlertAction(title: "카페", style: .default) { a in
-            self.makeAnnotations(a.title ?? "")
-        }
-        let action3 = UIAlertAction(title: "한식", style: .default) { a in
-            self.makeAnnotations(a.title ?? "")
-        }
-        alert.addAction(action1)
-        alert.addAction(action2)
-        alert.addAction(action3)
+        alert.addAction(UIAlertAction(title: "취소", style: .cancel))
         present(alert, animated: true)
     }
     
@@ -73,6 +73,15 @@ class RestaurantMapViewController: UIViewController {
             filterAnnotations.append(annotation)
         }
         mapView.addAnnotations(filterAnnotations)
+    }
+    
+    private func makeAction(_ title: String) -> UIAlertAction {
+        let action = UIAlertAction(title: title, style: .default) { action in
+            guard let actionTitle = action.title else { return }
+            self.makeAnnotations(actionTitle)
+            self.navigationItem.title = actionTitle
+        }
+        return action
     }
 
 
