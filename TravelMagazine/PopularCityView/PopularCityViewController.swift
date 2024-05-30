@@ -65,6 +65,7 @@ class PopularCityViewController: UIViewController {
         guard keyword != "" else {
             return
         }
+        let keyword = keyword.replacingOccurrences(of: " ", with: "")
         filterLIst = filterLIst.filter { $0.city_name.contains(keyword) ||
             $0.city_english_name.lowercased().contains(keyword.lowercased()) ||
             $0.city_explain.contains(keyword)}
