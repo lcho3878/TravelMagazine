@@ -25,6 +25,13 @@ class TravelTalkTableViewCell: UITableViewCell {
     }
     
     private func configureUI() {
+        nameLabel.font = .boldSystemFont(ofSize: 15)
+        
+        dateLabel.font = .systemFont(ofSize: 14)
+        contentLabel.textColor = .gray
+        
+        dateLabel.font = .systemFont(ofSize: 14)
+        dateLabel.textColor = .gray
     }
     
     func configureCell(_ chatRoom: ChatRoom) {
