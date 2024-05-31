@@ -10,7 +10,11 @@ import Kingfisher
 
 class DetailCityViewController: UIViewController {
 
-    private var list = TravelInfo().travel
+    private var list = TravelInfo().travel {
+        didSet{
+            detailCityTableView.reloadData()
+        }
+    }
     
     @IBOutlet var detailCityTableView: UITableView!
     
@@ -62,7 +66,6 @@ extension DetailCityViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive, title: "삭제") { _,_,_ in
             self.list.remove(at: indexPath.row)
-            self.detailCityTableView.reloadData()
         }
         let action = UISwipeActionsConfiguration(actions: [delete])
         return action
@@ -71,7 +74,6 @@ extension DetailCityViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let like = UIContextualAction(style: .normal, title: "좋아요") { _,_,_ in
             self.list[indexPath.row].like?.toggle()
-            self.detailCityTableView.reloadData()
         }
         let action = UISwipeActionsConfiguration(actions: [like])
         return action
@@ -79,7 +81,6 @@ extension DetailCityViewController: UITableViewDelegate, UITableViewDataSource {
     
     @objc func heartButtonClicked(_ sender: UIButton) {
         list[sender.tag].like?.toggle()
-        detailCityTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

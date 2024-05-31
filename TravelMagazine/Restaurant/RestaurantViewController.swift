@@ -11,7 +11,11 @@ import Kingfisher
 class RestaurantViewController: UITableViewController, UISearchBarDelegate {
 
     private let list = RestaurantList().restaurantArray
-    private var filterList = [Restaurant]()
+    private var filterList = [Restaurant]() {
+        didSet{
+            tableView.reloadData()
+        }
+    }
     
     @IBOutlet var searchBar: UISearchBar!
     
@@ -65,22 +69,18 @@ class RestaurantViewController: UITableViewController, UISearchBarDelegate {
         let text = searchText
         guard text != "" else {
             filterList = list
-            tableView.reloadData()
             return
         }
         filterList = list.filter { $0.name.contains(text) || $0.category.contains(text) }
-        tableView.reloadData()
     }
     
     @objc func filterButtonClicked(_ sender: UIBarButtonItem) {
         
         guard let category = sender.title , category != "전체" else {
             filterList = list
-            tableView.reloadData()
             return
         }
         filterList = list.filter { $0.category == category }
-        tableView.reloadData()
     }
 
 }

@@ -9,7 +9,11 @@ import UIKit
 
 class PopularCityViewController: UIViewController {
     private let list = CityInfo().city
-    private var filterLIst = [City]()
+    private var filterLIst = [City]() {
+        didSet{
+            cityTableView.reloadData()
+        }
+    }
     
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var segmentControl: UISegmentedControl!
@@ -44,7 +48,6 @@ class PopularCityViewController: UIViewController {
     private func actionWithTitle(_ title: String) -> UIAction {
         let action = UIAction(title: title) { _ in
             self.filterWithSegmentControl()
-            self.cityTableView.reloadData()
         }
         return action
     }
@@ -104,11 +107,9 @@ extension PopularCityViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         guard searchText != "" else {
             filterWithSegmentControl()
-            cityTableView.reloadData()
             return
         }
         filterWithSegmentControl()
         filterWithKeyword(searchText)
-        cityTableView.reloadData()
     }
 }
