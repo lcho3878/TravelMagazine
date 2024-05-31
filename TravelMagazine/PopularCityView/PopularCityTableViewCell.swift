@@ -24,6 +24,12 @@ class PopularCityTableViewCell: UITableViewCell {
         configureCell()
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        cityTitleLabel.textColor = .white
+        cityDescription.textColor = .white
+    }
+    
     private func configureCell() {
         cityTitleLabel.textColor = .white
         cityTitleLabel.font = .boldSystemFont(ofSize: 20)
@@ -41,10 +47,20 @@ class PopularCityTableViewCell: UITableViewCell {
         shadowView.layer.cornerRadius = 16
     }
     
-    func configureData(_ data: City) {
-        cityTitleLabel.text = "\(data.city_name) | \(data.city_english_name)"
-        cityDescription.text = data.city_explain
+    func configureData(_ data: City, _ searchText: String) {
+        cityTitleLabel.attributedText = getHilightedText("\(data.city_name) | \(data.city_english_name)", searchText)
+        cityDescription.attributedText = getHilightedText(data.city_explain, searchText)
         cityImageView.kf.setImage(with: URL(string: data.city_image))
+    }
+    
+    private func getHilightedText(_ text: String, _ searchText: String) -> NSAttributedString {
+        let attributedString = NSMutableAttributedString(string: text)
+        let range = (text.lowercased() as NSString).range(of: searchText.lowercased())
+        if range.location != NSNotFound {
+            attributedString.addAttribute(.foregroundColor, value: UIColor.red, range: range)
+            attributedString.addAttribute(.backgroundColor, value: UIColor.white, range: range)
+        }
+        return attributedString
     }
     
 }

@@ -93,7 +93,7 @@ extension PopularCityViewController: UITableViewDelegate, UITableViewDataSource 
             return UITableViewCell()
         }
         let data = filterLIst[indexPath.row]
-        cell.configureData(data)
+        cell.configureData(data, searchBar.text!)
         
         return cell
     }
