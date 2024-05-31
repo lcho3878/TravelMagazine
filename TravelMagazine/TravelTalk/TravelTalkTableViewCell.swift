@@ -1,0 +1,35 @@
+//
+//  TravelTalkTableViewCell.swift
+//  TravelMagazine
+//
+//  Created by 이찬호 on 6/1/24.
+//
+
+import UIKit
+
+class TravelTalkTableViewCell: UITableViewCell {
+
+    @IBOutlet var profileImageView: UIImageView!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var contentLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        configureUI()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
+    }
+    
+    private func configureUI() {
+    }
+    
+    func configureCell(_ chatRoom: ChatRoom) {
+        nameLabel.text = chatRoom.chatroomName
+        contentLabel.text = chatRoom.chatList.last?.message
+        dateLabel.text = chatRoom.chatList.last?.date
+    }
+}

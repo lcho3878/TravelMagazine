@@ -10,7 +10,6 @@ import Kingfisher
 
 class PopularCityTableViewCell: UITableViewCell {
     
-    static let identifier = "PopularCityTableViewCell"
 
     @IBOutlet var cityImageView: UIImageView!
     @IBOutlet var cityTitleLabel: UILabel!

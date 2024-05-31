@@ -17,6 +17,8 @@
 		541973C22C0A641F00A6245F /* TravelTalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541973C12C0A641F00A6245F /* TravelTalkViewController.swift */; };
 		541973C52C0A645200A6245F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541973C42C0A645200A6245F /* UIViewController+Extension.swift */; };
 		541973C72C0A654600A6245F /* ChattingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541973C62C0A654600A6245F /* ChattingData.swift */; };
+		541973CA2C0A669900A6245F /* TravelTalkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 541973C92C0A669900A6245F /* TravelTalkTableViewCell.xib */; };
+		541973CB2C0A669900A6245F /* TravelTalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541973C82C0A669900A6245F /* TravelTalkTableViewCell.swift */; };
 		54352ABE2C072BD70017F61E /* PopularCityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54352ABD2C072BD70017F61E /* PopularCityTableViewCell.xib */; };
 		54352ABF2C072BD70017F61E /* PopularCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54352ABC2C072BD70017F61E /* PopularCityTableViewCell.swift */; };
 		546ED9BC2C04712900E0C27B /* AdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546ED9BA2C04712900E0C27B /* AdTableViewCell.swift */; };
@@ -53,6 +55,8 @@
 		541973C12C0A641F00A6245F /* TravelTalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTalkViewController.swift; sourceTree = "<group>"; };
 		541973C42C0A645200A6245F /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		541973C62C0A654600A6245F /* ChattingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChattingData.swift; sourceTree = "<group>"; };
+		541973C82C0A669900A6245F /* TravelTalkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTalkTableViewCell.swift; sourceTree = "<group>"; };
+		541973C92C0A669900A6245F /* TravelTalkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelTalkTableViewCell.xib; sourceTree = "<group>"; };
 		54352ABC2C072BD70017F61E /* PopularCityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCityTableViewCell.swift; sourceTree = "<group>"; };
 		54352ABD2C072BD70017F61E /* PopularCityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCityTableViewCell.xib; sourceTree = "<group>"; };
 		546ED9BA2C04712900E0C27B /* AdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTableViewCell.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 			children = (
 				541973BE2C0A640200A6245F /* TravelTalk.storyboard */,
 				541973C12C0A641F00A6245F /* TravelTalkViewController.swift */,
+				541973C82C0A669900A6245F /* TravelTalkTableViewCell.swift */,
+				541973C92C0A669900A6245F /* TravelTalkTableViewCell.xib */,
 			);
 			path = TravelTalk;
 			sourceTree = "<group>";
@@ -184,11 +190,11 @@
 		54D354602C01A22600C970B1 /* TravelMagazine */ = {
 			isa = PBXGroup;
 			children = (
-				541973C32C0A644300A6245F /* Extension */,
 				54D354612C01A22600C970B1 /* AppDelegate.swift */,
 				54D354632C01A22600C970B1 /* SceneDelegate.swift */,
 				54D354652C01A22600C970B1 /* MainViewController.swift */,
 				54D354792C01A3D400C970B1 /* MagazineTableViewCell.swift */,
+				541973C32C0A644300A6245F /* Extension */,
 				54B2A6C62C07243500F0F2D9 /* Dummy */,
 				54B2A6C72C07245D00F0F2D9 /* Model */,
 				54D354672C01A22600C970B1 /* Main.storyboard */,
@@ -292,6 +298,7 @@
 				54D3546E2C01A22700C970B1 /* Base in Resources */,
 				54063B7F2C04688800A82864 /* DetailCityTableViewCell.xib in Resources */,
 				54D354692C01A22600C970B1 /* Base in Resources */,
+				541973CA2C0A669900A6245F /* TravelTalkTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +314,7 @@
 				54063B802C04688800A82864 /* DetailCityTableViewCell.swift in Sources */,
 				54B2A6C92C07249600F0F2D9 /* City.swift in Sources */,
 				54D354662C01A22600C970B1 /* MainViewController.swift in Sources */,
+				541973CB2C0A669900A6245F /* TravelTalkTableViewCell.swift in Sources */,
 				54352ABF2C072BD70017F61E /* PopularCityTableViewCell.swift in Sources */,
 				54063B822C046AA300A82864 /* TravelModel.swift in Sources */,
 				54D354812C0380EA00C970B1 /* RestaurantViewController.swift in Sources */,

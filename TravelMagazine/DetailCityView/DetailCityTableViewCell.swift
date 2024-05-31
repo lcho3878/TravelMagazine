@@ -9,7 +9,6 @@ import UIKit
 
 class DetailCityTableViewCell: UITableViewCell {
     
-    static let identifier = "DetailCityTableViewCell"
 
     @IBOutlet var mainImageView: UIImageView!
     @IBOutlet var mainTitle: UILabel!

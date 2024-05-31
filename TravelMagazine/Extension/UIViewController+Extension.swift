@@ -15,6 +15,12 @@ extension UIViewController: ReuseIdentifier {
     
 }
 
+extension UITableViewCell: ReuseIdentifier {
+    static var identifier: String {
+        return String(describing: self)
+    }
+}
+
 protocol ReuseIdentifier {
     
     static var identifier: String { get }
