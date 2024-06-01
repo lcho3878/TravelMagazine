@@ -50,6 +50,15 @@ extension TravelTalkViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chatRoom = filterList[indexPath.row]
+        let sb = UIStoryboard(name: "Chatting", bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: ChattingViewController.identifier) as? ChattingViewController else { return }
+        vc.chatRoom = chatRoom
+        navigationController?.pushViewController(vc, animated: true)
+        
+        // 만들거 : 단톡방 뷰컨, 1대1 뷰컨, 타인 채팅, 내 채팅 셀 ㅇㅋ
+    }
     
 }
 

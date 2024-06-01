@@ -35,7 +35,8 @@ class TravelTalkTableViewCell: UITableViewCell {
     }
     
     func configureCell(_ chatRoom: ChatRoom) {
-        nameLabel.text = chatRoom.chatroomName
+        let sub = chatRoom.chatroomImage.count == 1 ? "" : "단톡방입니다."
+        nameLabel.text = chatRoom.chatroomName + sub
         contentLabel.text = chatRoom.chatList.last?.message
         dateLabel.text = chatRoom.chatList.last?.date
     }
