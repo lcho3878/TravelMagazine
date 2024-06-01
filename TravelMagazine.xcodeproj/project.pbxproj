@@ -25,6 +25,10 @@
 		546ED9BD2C04712900E0C27B /* AdTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 546ED9BB2C04712900E0C27B /* AdTableViewCell.xib */; };
 		54A100872C0ACF03005DD8AA /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A100862C0ACF03005DD8AA /* ChattingViewController.swift */; };
 		54A100892C0ACF0E005DD8AA /* Chatting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54A100882C0ACF0E005DD8AA /* Chatting.storyboard */; };
+		54A100902C0AD235005DD8AA /* OtherChattingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A1008F2C0AD235005DD8AA /* OtherChattingTableViewCell.xib */; };
+		54A100912C0AD235005DD8AA /* OtherChattingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A1008E2C0AD235005DD8AA /* OtherChattingTableViewCell.swift */; };
+		54A100942C0AD23D005DD8AA /* MyChattingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A100932C0AD23D005DD8AA /* MyChattingTableViewCell.xib */; };
+		54A100952C0AD23D005DD8AA /* MyChattingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A100922C0AD23D005DD8AA /* MyChattingTableViewCell.swift */; };
 		54B2A6BF2C0722F900F0F2D9 /* PopularCity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B2A6BE2C0722F900F0F2D9 /* PopularCity.storyboard */; };
 		54B2A6C12C07234200F0F2D9 /* PopularCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B2A6C02C07234200F0F2D9 /* PopularCityViewController.swift */; };
 		54B2A6C52C07242C00F0F2D9 /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B2A6C42C07242C00F0F2D9 /* CityInfo.swift */; };
@@ -65,6 +69,10 @@
 		546ED9BB2C04712900E0C27B /* AdTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdTableViewCell.xib; sourceTree = "<group>"; };
 		54A100862C0ACF03005DD8AA /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
 		54A100882C0ACF0E005DD8AA /* Chatting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chatting.storyboard; sourceTree = "<group>"; };
+		54A1008E2C0AD235005DD8AA /* OtherChattingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherChattingTableViewCell.swift; sourceTree = "<group>"; };
+		54A1008F2C0AD235005DD8AA /* OtherChattingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherChattingTableViewCell.xib; sourceTree = "<group>"; };
+		54A100922C0AD23D005DD8AA /* MyChattingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChattingTableViewCell.swift; sourceTree = "<group>"; };
+		54A100932C0AD23D005DD8AA /* MyChattingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyChattingTableViewCell.xib; sourceTree = "<group>"; };
 		54B2A6BE2C0722F900F0F2D9 /* PopularCity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopularCity.storyboard; sourceTree = "<group>"; };
 		54B2A6C02C07234200F0F2D9 /* PopularCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCityViewController.swift; sourceTree = "<group>"; };
 		54B2A6C42C07242C00F0F2D9 /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
@@ -134,6 +142,10 @@
 				541973C92C0A669900A6245F /* TravelTalkTableViewCell.xib */,
 				54A100862C0ACF03005DD8AA /* ChattingViewController.swift */,
 				54A100882C0ACF0E005DD8AA /* Chatting.storyboard */,
+				54A1008E2C0AD235005DD8AA /* OtherChattingTableViewCell.swift */,
+				54A100922C0AD23D005DD8AA /* MyChattingTableViewCell.swift */,
+				54A100932C0AD23D005DD8AA /* MyChattingTableViewCell.xib */,
+				54A1008F2C0AD235005DD8AA /* OtherChattingTableViewCell.xib */,
 			);
 			path = TravelTalk;
 			sourceTree = "<group>";
@@ -297,6 +309,7 @@
 			files = (
 				541973BF2C0A640200A6245F /* TravelTalk.storyboard in Resources */,
 				54B2A6BF2C0722F900F0F2D9 /* PopularCity.storyboard in Resources */,
+				54A100902C0AD235005DD8AA /* OtherChattingTableViewCell.xib in Resources */,
 				54D3546B2C01A22700C970B1 /* Assets.xcassets in Resources */,
 				54063B7A2C0466AB00A82864 /* DetailCity.storyboard in Resources */,
 				546ED9BD2C04712900E0C27B /* AdTableViewCell.xib in Resources */,
@@ -306,6 +319,7 @@
 				54063B7F2C04688800A82864 /* DetailCityTableViewCell.xib in Resources */,
 				54D354692C01A22600C970B1 /* Base in Resources */,
 				541973CA2C0A669900A6245F /* TravelTalkTableViewCell.xib in Resources */,
+				54A100942C0AD23D005DD8AA /* MyChattingTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,9 +334,11 @@
 				541973C72C0A654600A6245F /* ChattingData.swift in Sources */,
 				54063B802C04688800A82864 /* DetailCityTableViewCell.swift in Sources */,
 				54B2A6C92C07249600F0F2D9 /* City.swift in Sources */,
+				54A100912C0AD235005DD8AA /* OtherChattingTableViewCell.swift in Sources */,
 				54D354662C01A22600C970B1 /* MainViewController.swift in Sources */,
 				541973CB2C0A669900A6245F /* TravelTalkTableViewCell.swift in Sources */,
 				54A100872C0ACF03005DD8AA /* ChattingViewController.swift in Sources */,
+				54A100952C0AD23D005DD8AA /* MyChattingTableViewCell.swift in Sources */,
 				54352ABF2C072BD70017F61E /* PopularCityTableViewCell.swift in Sources */,
 				54063B822C046AA300A82864 /* TravelModel.swift in Sources */,
 				54D354812C0380EA00C970B1 /* RestaurantViewController.swift in Sources */,

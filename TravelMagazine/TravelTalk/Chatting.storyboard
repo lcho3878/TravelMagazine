@@ -16,9 +16,28 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9S6-lF-ZYT">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9S6-lF-ZYT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="60r-lN-Cfx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9S6-lF-ZYT" secondAttribute="trailing" id="7pJ-1Z-FQq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9S6-lF-ZYT" secondAttribute="trailing" id="8rG-Ag-KsC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="9S6-lF-ZYT" secondAttribute="bottom" id="ADP-n2-3p0"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="9S6-lF-ZYT" secondAttribute="bottom" id="Ez9-zP-YBv"/>
+                            <constraint firstItem="9S6-lF-ZYT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="QL1-uc-JII"/>
+                            <constraint firstItem="9S6-lF-ZYT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="hGg-Ov-9n6"/>
+                            <constraint firstItem="9S6-lF-ZYT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="igS-mw-hVl"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chattingTableView" destination="9S6-lF-ZYT" id="c3k-Sj-kt9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
