@@ -26,18 +26,27 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVg-pX-6ky">
+                        <rect key="frame" x="230.33333333333334" y="60" width="42.000000000000028" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="USf-IA-HdH" secondAttribute="trailing" constant="8" id="Fmm-d1-fn6"/>
                     <constraint firstItem="USf-IA-HdH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="LJR-uy-yZA"/>
                     <constraint firstItem="USf-IA-HdH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="UxZ-3s-V5W"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="EVg-pX-6ky" secondAttribute="bottom" constant="8" id="YUr-nQ-H4M"/>
                     <constraint firstAttribute="bottomMargin" secondItem="USf-IA-HdH" secondAttribute="bottom" constant="8" id="bI1-ec-FFk"/>
+                    <constraint firstItem="USf-IA-HdH" firstAttribute="leading" secondItem="EVg-pX-6ky" secondAttribute="trailing" constant="8" id="cWI-mJ-O2R"/>
                     <constraint firstItem="USf-IA-HdH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="80" id="vqm-EF-kum"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="contentLabel" destination="USf-IA-HdH" id="q3f-Hf-FoH"/>
+                <outlet property="dateLabel" destination="EVg-pX-6ky" id="LMz-pf-CKK"/>
             </connections>
             <point key="canvasLocation" x="89.312977099236633" y="8.4507042253521139"/>
         </tableViewCell>

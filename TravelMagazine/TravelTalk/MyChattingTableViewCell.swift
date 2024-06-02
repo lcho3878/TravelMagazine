@@ -10,6 +10,7 @@ import UIKit
 class MyChattingTableViewCell: UITableViewCell {
 
     @IBOutlet var contentLabel: UIPaddingLabel!
+    @IBOutlet var dateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,10 +27,14 @@ class MyChattingTableViewCell: UITableViewCell {
         contentLabel.layer.cornerRadius = 8
         contentLabel.clipsToBounds = true
         contentLabel.layer.borderWidth = 1
+        
+        dateLabel.font = .systemFont(ofSize: 13)
+        dateLabel.textColor = .lightGray
     }
     
     func configureData(chat: Chat) {
         contentLabel.text = chat.message
+        dateLabel.text = chat.chatDate
     }
     
 }
