@@ -50,7 +50,7 @@ extension TravelTalkViewController: UITableViewDelegate, UITableViewDataSource {
         cell.profileImageView.backgroundColor = .blue
         
         let chatRoom = filterList[indexPath.row]
-        cell.configureCell(chatRoom)
+        cell.configureCell(chatRoom, searchBar.text!)
         
         return cell
     }
@@ -74,7 +74,8 @@ extension TravelTalkViewController: UISearchBarDelegate {
         filterList = chatList.filter {
             $0.chatList.contains(where: {
                 $0.user.rawValue.contains(searchText)
-            })
+            }) || $0.chatroomName.contains(searchText)
+            
         }
     }
 }

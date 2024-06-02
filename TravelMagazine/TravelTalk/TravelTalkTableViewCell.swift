@@ -34,9 +34,8 @@ class TravelTalkTableViewCell: UITableViewCell {
         dateLabel.textColor = .gray
     }
     
-    func configureCell(_ chatRoom: ChatRoom) {
-        let sub = chatRoom.chatroomImage.count == 1 ? "" : "단톡방입니다."
-        nameLabel.text = chatRoom.chatroomName + sub
+    func configureCell(_ chatRoom: ChatRoom, _ searchText: String) {
+        nameLabel.attributedText = getHilightedText(chatRoom.chatroomName, searchText)
         contentLabel.text = chatRoom.chatList.last?.message
         dateLabel.text = chatRoom.chatList.last?.listDate
     }
