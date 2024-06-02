@@ -46,7 +46,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="searchBar" destination="9GU-dy-t7g" id="4LO-fh-2W5"/>
+                        <outlet property="searchBar" destination="9GU-dy-t7g" id="ZqP-kn-mSz"/>
                         <outlet property="talkTableView" destination="QmO-UP-S8C" id="fCu-dv-2zB"/>
                     </connections>
                 </viewController>

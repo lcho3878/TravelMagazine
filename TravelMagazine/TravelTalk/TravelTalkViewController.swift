@@ -21,15 +21,20 @@ class TravelTalkViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        filterList = chatList
         configureTableView()
+        configureSearchBar()
     }
 
     private func configureTableView() {
+        filterList = chatList
         talkTableView.rowHeight = 80
         talkTableView.delegate = self
         talkTableView.dataSource = self
         talkTableView.register(UINib(nibName: TravelTalkTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: TravelTalkTableViewCell.identifier)
+    }
+    
+    private func configureSearchBar() {
+        searchBar.delegate = self
     }
 }
 
@@ -56,9 +61,20 @@ extension TravelTalkViewController: UITableViewDelegate, UITableViewDataSource {
         guard let vc = sb.instantiateViewController(withIdentifier: ChattingViewController.identifier) as? ChattingViewController else { return }
         vc.chatRoom = chatRoom
         navigationController?.pushViewController(vc, animated: true)
-        
-        // 만들거 : 단톡방 뷰컨, 1대1 뷰컨, 타인 채팅, 내 채팅 셀 ㅇㅋ
     }
     
 }
 
+extension TravelTalkViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard searchText != "" else {
+            filterList = chatList
+            return
+        }
+        filterList = chatList.filter {
+            $0.chatList.contains(where: {
+                $0.user.rawValue.contains(searchText)
+            })
+        }
+    }
+}
