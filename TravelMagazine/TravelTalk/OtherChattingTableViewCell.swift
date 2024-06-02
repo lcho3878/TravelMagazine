@@ -35,6 +35,9 @@ class OtherChattingTableViewCell: UITableViewCell {
         contentLabel.clipsToBounds = true
         contentLabel.layer.borderWidth = 1
         
+        dateLabel.textColor = .lightGray
+        dateLabel.font = .systemFont(ofSize: 13)
+        
         profileImageView.backgroundColor = . blue
     }
 
