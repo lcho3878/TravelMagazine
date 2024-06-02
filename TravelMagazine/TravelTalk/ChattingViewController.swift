@@ -11,11 +11,13 @@ class ChattingViewController: UIViewController {
     
     var chatRoom: ChatRoom!
     @IBOutlet var chattingTableView: UITableView!
-
+    @IBOutlet var chattingTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
         configureNavigationItems()
+        configureTextField()
     }
     
     private func configureNavigationItems() {
@@ -33,6 +35,14 @@ class ChattingViewController: UIViewController {
         chattingTableView.register(UINib(nibName: OtherChattingTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: OtherChattingTableViewCell.identifier)
     }
 
+    private func configureTextField() {
+        chattingTextField.placeholder = "메시지를 입력하세요"
+        chattingTextField.backgroundColor = .systemGray6
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "paperplane.fill"), for: .normal)
+        chattingTextField.rightView = button
+        chattingTextField.rightViewMode = .always
+    }
 
 }
 
