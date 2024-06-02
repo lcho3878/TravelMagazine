@@ -21,12 +21,7 @@ struct Magazine {
     }
     
     var dateString: String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yymmdd"
-        let date = dateFormatter.date(from: date)!
-        dateFormatter.dateFormat = "yy년 mm월 dd일"
-        let formattedDate = dateFormatter.string(from: date)
-        return formattedDate
+        return StringDate(text: date, originFormat: "yyMMdd", format: "yy년 MM월 dd일")
     }
         
 }

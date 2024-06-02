@@ -38,6 +38,6 @@ class TravelTalkTableViewCell: UITableViewCell {
         let sub = chatRoom.chatroomImage.count == 1 ? "" : "단톡방입니다."
         nameLabel.text = chatRoom.chatroomName + sub
         contentLabel.text = chatRoom.chatList.last?.message
-        dateLabel.text = chatRoom.chatList.last?.date
+        dateLabel.text = chatRoom.chatList.last?.listDate
     }
 }

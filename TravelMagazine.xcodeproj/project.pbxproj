@@ -30,6 +30,7 @@
 		54A100942C0AD23D005DD8AA /* MyChattingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A100932C0AD23D005DD8AA /* MyChattingTableViewCell.xib */; };
 		54A100952C0AD23D005DD8AA /* MyChattingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A100922C0AD23D005DD8AA /* MyChattingTableViewCell.swift */; };
 		54A100972C0C3E48005DD8AA /* UIPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A100962C0C3E48005DD8AA /* UIPaddingLabel.swift */; };
+		54A100992C0C3FAE005DD8AA /* StringDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A100982C0C3FAE005DD8AA /* StringDate.swift */; };
 		54B2A6BF2C0722F900F0F2D9 /* PopularCity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B2A6BE2C0722F900F0F2D9 /* PopularCity.storyboard */; };
 		54B2A6C12C07234200F0F2D9 /* PopularCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B2A6C02C07234200F0F2D9 /* PopularCityViewController.swift */; };
 		54B2A6C52C07242C00F0F2D9 /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B2A6C42C07242C00F0F2D9 /* CityInfo.swift */; };
@@ -75,6 +76,7 @@
 		54A100922C0AD23D005DD8AA /* MyChattingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChattingTableViewCell.swift; sourceTree = "<group>"; };
 		54A100932C0AD23D005DD8AA /* MyChattingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyChattingTableViewCell.xib; sourceTree = "<group>"; };
 		54A100962C0C3E48005DD8AA /* UIPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPaddingLabel.swift; sourceTree = "<group>"; };
+		54A100982C0C3FAE005DD8AA /* StringDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringDate.swift; sourceTree = "<group>"; };
 		54B2A6BE2C0722F900F0F2D9 /* PopularCity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopularCity.storyboard; sourceTree = "<group>"; };
 		54B2A6C02C07234200F0F2D9 /* PopularCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCityViewController.swift; sourceTree = "<group>"; };
 		54B2A6C42C07242C00F0F2D9 /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				541973C42C0A645200A6245F /* UIViewController+Extension.swift */,
+				54A100982C0C3FAE005DD8AA /* StringDate.swift */,
 				54A100962C0C3E48005DD8AA /* UIPaddingLabel.swift */,
 			);
 			path = Extension;
@@ -333,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54A100992C0C3FAE005DD8AA /* StringDate.swift in Sources */,
 				54D354832C0381C900C970B1 /* RestaurantCell.swift in Sources */,
 				541973C72C0A654600A6245F /* ChattingData.swift in Sources */,
 				54063B802C04688800A82864 /* DetailCityTableViewCell.swift in Sources */,

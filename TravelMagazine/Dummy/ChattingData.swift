@@ -35,6 +35,14 @@ struct Chat {
     let user: User
     let date: String
     let message: String
+    
+    var listDate: String {
+        return StringDate(text: date, originFormat: "yyyy-MM-dd HH:mm", format: "yy.MM.dd")
+    }
+    
+    var chatDate: String{
+        return StringDate(text: date, originFormat: "yyyy-MM-dd HH:mm", format: "hh:mm aa")
+    }
 }
 
 

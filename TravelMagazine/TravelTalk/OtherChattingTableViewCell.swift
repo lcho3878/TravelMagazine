@@ -41,7 +41,7 @@ class OtherChattingTableViewCell: UITableViewCell {
     func configreData(_ chat: Chat) {
         nameLabel.text = chat.user.rawValue
         contentLabel.text = chat.message
-        dateLabel.text = chat.date
+        dateLabel.text = chat.chatDate
     }
     
 }
