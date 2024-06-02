@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9S6-lF-ZYT">
-                                <rect key="frame" x="0.0" y="59" width="393" height="701"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="711"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CDI-GV-PAY">
-                                <rect key="frame" x="8" y="760" width="377" height="50"/>
+                                <rect key="frame" x="8" y="770" width="377" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Yhr-Zp-gRw"/>
+                                    <constraint firstAttribute="height" constant="40" id="Yhr-Zp-gRw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -35,10 +35,8 @@
                         <constraints>
                             <constraint firstItem="CDI-GV-PAY" firstAttribute="top" secondItem="9S6-lF-ZYT" secondAttribute="bottom" id="4s8-hF-P6B"/>
                             <constraint firstItem="9S6-lF-ZYT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="60r-lN-Cfx"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9S6-lF-ZYT" secondAttribute="trailing" id="7pJ-1Z-FQq"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9S6-lF-ZYT" secondAttribute="trailing" id="8rG-Ag-KsC"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="CDI-GV-PAY" secondAttribute="bottom" constant="8" id="Fec-mX-hvD"/>
-                            <constraint firstItem="9S6-lF-ZYT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="QL1-uc-JII"/>
                             <constraint firstItem="9S6-lF-ZYT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="hGg-Ov-9n6"/>
                             <constraint firstItem="CDI-GV-PAY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="k7Z-3B-QaU"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CDI-GV-PAY" secondAttribute="trailing" constant="8" id="nUT-jp-usa"/>

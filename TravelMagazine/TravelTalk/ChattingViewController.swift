@@ -33,6 +33,7 @@ class ChattingViewController: UIViewController {
         chattingTableView.separatorColor = .clear
         chattingTableView.register(UINib(nibName: MyChattingTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: MyChattingTableViewCell.identifier)
         chattingTableView.register(UINib(nibName: OtherChattingTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: OtherChattingTableViewCell.identifier)
+        chattingTableView.scrollToRow(at: IndexPath(row: chatRoom.chatList.count - 1, section: 0), at: .bottom, animated: false)
     }
 
     private func configureTextField() {
@@ -69,6 +70,5 @@ extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {
         }
 
     }
-    
     
 }
