@@ -48,7 +48,6 @@ extension TravelTalkViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TravelTalkTableViewCell.identifier, for: indexPath) as? TravelTalkTableViewCell else {
             return UITableViewCell()
         }
-        cell.profileImageView.backgroundColor = .blue
         
         let chatRoom = filterList[indexPath.row]
         cell.configureCell(chatRoom, searchBar.text!)

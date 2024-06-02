@@ -38,5 +38,9 @@ class TravelTalkTableViewCell: UITableViewCell {
         nameLabel.attributedText = getHilightedText(chatRoom.chatroomName, searchText)
         contentLabel.text = chatRoom.chatList.last?.message
         dateLabel.text = chatRoom.chatList.last?.listDate
+        
+        if chatRoom.chatroomImage.count == 1 {
+            profileImageView.image = UIImage(named: chatRoom.chatroomImage.first ?? "")
+        }
     }
 }

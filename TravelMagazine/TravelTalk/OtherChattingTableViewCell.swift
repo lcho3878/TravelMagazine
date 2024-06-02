@@ -38,13 +38,15 @@ class OtherChattingTableViewCell: UITableViewCell {
         dateLabel.textColor = .lightGray
         dateLabel.font = .systemFont(ofSize: 13)
         
-        profileImageView.backgroundColor = . blue
+        profileImageView.contentMode = .scaleAspectFill
     }
 
     func configreData(_ chat: Chat) {
         nameLabel.text = chat.user.rawValue
         contentLabel.text = chat.message
         dateLabel.text = chat.chatDate
+
+        profileImageView.image = UIImage(named: chat.user.profileImage)
     }
     
 }
