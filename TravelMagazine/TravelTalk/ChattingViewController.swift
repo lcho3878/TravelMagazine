@@ -15,6 +15,13 @@ class ChattingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        configureNavigationItems()
+    }
+    
+    private func configureNavigationItems() {
+        navigationItem.title = chatRoom.chatroomImage.count == 1 ? chatRoom.chatroomName : "그룹 채팅"
+        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.topItem?.title = ""
     }
     
     private func configureTableView() {
