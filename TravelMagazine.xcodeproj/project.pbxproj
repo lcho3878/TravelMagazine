@@ -29,6 +29,7 @@
 		54A100912C0AD235005DD8AA /* OtherChattingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A1008E2C0AD235005DD8AA /* OtherChattingTableViewCell.swift */; };
 		54A100942C0AD23D005DD8AA /* MyChattingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A100932C0AD23D005DD8AA /* MyChattingTableViewCell.xib */; };
 		54A100952C0AD23D005DD8AA /* MyChattingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A100922C0AD23D005DD8AA /* MyChattingTableViewCell.swift */; };
+		54A100972C0C3E48005DD8AA /* UIPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A100962C0C3E48005DD8AA /* UIPaddingLabel.swift */; };
 		54B2A6BF2C0722F900F0F2D9 /* PopularCity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B2A6BE2C0722F900F0F2D9 /* PopularCity.storyboard */; };
 		54B2A6C12C07234200F0F2D9 /* PopularCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B2A6C02C07234200F0F2D9 /* PopularCityViewController.swift */; };
 		54B2A6C52C07242C00F0F2D9 /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B2A6C42C07242C00F0F2D9 /* CityInfo.swift */; };
@@ -73,6 +74,7 @@
 		54A1008F2C0AD235005DD8AA /* OtherChattingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherChattingTableViewCell.xib; sourceTree = "<group>"; };
 		54A100922C0AD23D005DD8AA /* MyChattingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChattingTableViewCell.swift; sourceTree = "<group>"; };
 		54A100932C0AD23D005DD8AA /* MyChattingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyChattingTableViewCell.xib; sourceTree = "<group>"; };
+		54A100962C0C3E48005DD8AA /* UIPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPaddingLabel.swift; sourceTree = "<group>"; };
 		54B2A6BE2C0722F900F0F2D9 /* PopularCity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopularCity.storyboard; sourceTree = "<group>"; };
 		54B2A6C02C07234200F0F2D9 /* PopularCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCityViewController.swift; sourceTree = "<group>"; };
 		54B2A6C42C07242C00F0F2D9 /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				541973C42C0A645200A6245F /* UIViewController+Extension.swift */,
+				54A100962C0C3E48005DD8AA /* UIPaddingLabel.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				54B2A6C52C07242C00F0F2D9 /* CityInfo.swift in Sources */,
 				54D354622C01A22600C970B1 /* AppDelegate.swift in Sources */,
 				541973C22C0A641F00A6245F /* TravelTalkViewController.swift in Sources */,
+				54A100972C0C3E48005DD8AA /* UIPaddingLabel.swift in Sources */,
 				54D354642C01A22600C970B1 /* SceneDelegate.swift in Sources */,
 				54063B7C2C04680000A82864 /* DetailCityViewController.swift in Sources */,
 				54D6AD7D2C07187000386E45 /* DetailViewController.swift in Sources */,

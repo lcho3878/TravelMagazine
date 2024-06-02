@@ -8,9 +8,8 @@
 import UIKit
 
 class MyChattingTableViewCell: UITableViewCell {
-    // 채팅 내용 간격 주기
 
-    @IBOutlet var contentLabel: UILabel!
+    @IBOutlet var contentLabel: UIPaddingLabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

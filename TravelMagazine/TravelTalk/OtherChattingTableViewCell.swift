@@ -10,14 +10,13 @@ import UIKit
 class OtherChattingTableViewCell: UITableViewCell {
 
     @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var contentLabel: UILabel!
+    @IBOutlet var contentLabel: UIPaddingLabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var profileImageView: UIImageView!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         configureUI()
 
     }
