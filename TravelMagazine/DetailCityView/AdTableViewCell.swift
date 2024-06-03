@@ -22,7 +22,7 @@ class AdTableViewCell: UITableViewCell {
     }
     
     private func configureCell () {
-        backView.backgroundColor = RandomColor()
+        
         backView.layer.cornerRadius = 8
         
         adLabel.textColor = .black
@@ -32,15 +32,10 @@ class AdTableViewCell: UITableViewCell {
     
     func configureData(_ data: Travel) {
         titleLabel.text = data.title
+        backView.backgroundColor = data.bgColor
     }
     
-    func RandomColor() -> UIColor {
-        let red = CGFloat.random(in: 0...1)
-        let green = CGFloat.random(in: 0...1)
-        let blue = CGFloat.random(in: 0...1)
-        let color = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
-        return color
-    }
+
 
     
 }

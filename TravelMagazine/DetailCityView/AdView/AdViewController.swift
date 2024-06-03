@@ -14,6 +14,7 @@ class AdViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationItems()
+        view.backgroundColor = data?.bgColor
     }
     
     private func configureNavigationItems() {

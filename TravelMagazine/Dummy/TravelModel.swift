@@ -4,7 +4,7 @@
 //  Created by Den on 2024/05/11.
 //
 
-import Foundation
+import UIKit
 
 struct Travel {
     let title: String?
@@ -20,6 +20,8 @@ struct Travel {
         guard let url = URL(string: travel_image!) else { return nil }
         return url
     }
+    
+    let bgColor = UIColor.random
 }
 
 struct TravelInfo {

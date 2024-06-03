@@ -35,7 +35,7 @@ class RestaurantCell: UITableViewCell {
     }
     
     func configureCell(_ data: Restaurant) {
-        titleLabel.text = "\(data.name) | \(data.category)"
+        titleLabel.text = data.titleText
         subtitleLabel.text = data.address
         descriptionLabel.text = data.price.formatted() + "원"
         let url = URL(string: data.image)

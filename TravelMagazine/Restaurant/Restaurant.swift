@@ -19,6 +19,9 @@ struct Restaurant {
     let price: Int
     let type: Int
     var isLike: Bool = false
+    var titleText: String {
+        return "\(name) | \(category)"
+    }
 }
 
 struct RestaurantList {
