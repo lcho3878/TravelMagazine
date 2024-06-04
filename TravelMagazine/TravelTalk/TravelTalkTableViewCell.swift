@@ -32,6 +32,8 @@ class TravelTalkTableViewCell: UITableViewCell {
         
         dateLabel.font = .systemFont(ofSize: 14)
         dateLabel.textColor = .gray
+        
+        profileImageView.contentMode = .scaleAspectFill
     }
     
     func configureCell(_ chatRoom: ChatRoom, _ searchText: String) {
