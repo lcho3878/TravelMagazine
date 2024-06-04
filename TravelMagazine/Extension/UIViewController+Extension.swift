@@ -26,3 +26,9 @@ protocol ReuseIdentifier {
     static var identifier: String { get }
     
 }
+
+extension UIImageView {
+    func makeCircle() {
+        layer.cornerRadius = frame.height / 2
+    }
+}

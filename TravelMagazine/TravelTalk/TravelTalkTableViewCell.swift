@@ -21,7 +21,7 @@ class TravelTalkTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
+        profileImageView.makeCircle()
     }
     
     private func configureUI() {

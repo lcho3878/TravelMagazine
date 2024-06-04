@@ -23,7 +23,7 @@ class OtherChattingTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
+        profileImageView.makeCircle()
     }
     
     private func configureUI() {
