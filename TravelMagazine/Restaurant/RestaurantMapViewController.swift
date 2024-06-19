@@ -7,9 +7,11 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class RestaurantMapViewController: UIViewController {
     
+    var locationManager = CLLocationManager()
     // 새싹좌표
     let center = CLLocationCoordinate2D(latitude: 37.517857, longitude: 126.886714)
     
@@ -28,16 +30,19 @@ class RestaurantMapViewController: UIViewController {
         return arr
     }
     var filterAnnotaions: [MKPointAnnotation] = []
+    
+    
 
     @IBOutlet var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureMapView()
+        configureMapView(center)
         configureNavigationItems()
+        configureCLLocationManager()
     }
     
-    private func configureMapView() {
-        mapView.region = MKCoordinateRegion(center: center, latitudinalMeters: 1000, longitudinalMeters: 1000)
+    private func configureMapView(_ center: CLLocationCoordinate2D) {
+        mapView.region = MKCoordinateRegion(center: center, latitudinalMeters: 500, longitudinalMeters: 500)
         mapView.addAnnotations(annotaions)
     }
     
@@ -87,6 +92,55 @@ class RestaurantMapViewController: UIViewController {
     }
 
 
-
 }
 
+extension RestaurantMapViewController: CLLocationManagerDelegate {
+    
+    private func configureCLLocationManager() {
+        locationManager.delegate = self
+    }
+    
+    private func checkDeviceLocationAuthorization() {
+        if CLLocationManager.locationServicesEnabled() {
+            checkCurrentLocationAuthorization()
+        }
+        else {
+            print("위치서비스 꺼짐")
+        }
+    }
+    
+    private func checkCurrentLocationAuthorization() {
+        let status = locationManager.authorizationStatus
+        switch status {
+        case .notDetermined:
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestWhenInUseAuthorization()
+        case .denied:
+            print("거부됨")
+        case .authorizedWhenInUse:
+            locationManager.startUpdatingLocation()
+        @unknown default:
+            print(status)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print(#function)
+        print(locations)
+        if let coordinate = locations.last?.coordinate {
+            configureMapView(coordinate)
+        }
+        locationManager.stopUpdatingLocation()
+
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: any Error) {
+        print(#function)
+    }
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        print(#function)
+        checkDeviceLocationAuthorization()
+    }
+    
+}

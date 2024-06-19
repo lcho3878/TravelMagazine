@@ -83,6 +83,8 @@
 		54B2A6C02C07234200F0F2D9 /* PopularCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCityViewController.swift; sourceTree = "<group>"; };
 		54B2A6C42C07242C00F0F2D9 /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
 		54B2A6C82C07249600F0F2D9 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		54CFA1502C22DB2500A82579 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		54CFA1522C22DB9700A82579 /* libswiftWebKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftWebKit.tbd; path = usr/lib/swift/libswiftWebKit.tbd; sourceTree = SDKROOT; };
 		54D3545E2C01A22600C970B1 /* TravelMagazine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelMagazine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D354612C01A22600C970B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54D354632C01A22600C970B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -198,11 +200,21 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		54CFA14F2C22DB0F00A82579 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54CFA1522C22DB9700A82579 /* libswiftWebKit.tbd */,
+				54CFA1502C22DB2500A82579 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		54D354552C01A22600C970B1 = {
 			isa = PBXGroup;
 			children = (
 				54D354602C01A22600C970B1 /* TravelMagazine */,
 				54D3545F2C01A22600C970B1 /* Products */,
+				54CFA14F2C22DB0F00A82579 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -520,6 +532,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 82M3Y9RKT2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TravelMagazine/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -531,6 +544,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/swift",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lcho3878.TravelMagazine;
@@ -552,6 +569,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 82M3Y9RKT2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TravelMagazine/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -563,6 +581,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/swift",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lcho3878.TravelMagazine;
