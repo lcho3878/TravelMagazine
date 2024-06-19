@@ -8,8 +8,12 @@
 import UIKit
 import MapKit
 import CoreLocation
+protocol RestaurantMapViewControllerDelegate {
+    func update()
+}
 
 class RestaurantMapViewController: UIViewController {
+//    weak var delegate
     
     var locationManager = CLLocationManager()
     // 새싹좌표
@@ -39,6 +43,11 @@ class RestaurantMapViewController: UIViewController {
         configureMapView(center)
         configureNavigationItems()
         configureCLLocationManager()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        checkDeviceLocationAuthorization()
     }
     
     private func configureMapView(_ center: CLLocationCoordinate2D) {
@@ -91,7 +100,19 @@ class RestaurantMapViewController: UIViewController {
         return action
     }
 
+    private func showAuthrorizationAlert(message: String) {
+        let alert = UIAlertController(title: "권한 필요", message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "확인", style: .default) { _ in
+            if let appSetting = URL(string: UIApplication.openSettingsURLString) {
+                UIApplication.shared.open(appSetting, options: [:], completionHandler: nil)
+            }
+        }
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        present(alert, animated: true)
 
+    }
 }
 
 extension RestaurantMapViewController: CLLocationManagerDelegate {
@@ -100,12 +121,12 @@ extension RestaurantMapViewController: CLLocationManagerDelegate {
         locationManager.delegate = self
     }
     
-    private func checkDeviceLocationAuthorization() {
+    func checkDeviceLocationAuthorization() {
         if CLLocationManager.locationServicesEnabled() {
             checkCurrentLocationAuthorization()
         }
         else {
-            print("위치서비스 꺼짐")
+            showAuthrorizationAlert(message: "지도 서비스를 이용하기 위해선 위치 서비스 기능이 필요합니다.\n 설정 - 개인정보 보호 및 보안 - 위치서비스 - 켬")
         }
     }
     
@@ -116,7 +137,7 @@ extension RestaurantMapViewController: CLLocationManagerDelegate {
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.requestWhenInUseAuthorization()
         case .denied:
-            print("거부됨")
+            showAuthrorizationAlert(message: "지도 서비스를 이용하기 위해선 위치 권한이 필요합니다.")
         case .authorizedWhenInUse:
             locationManager.startUpdatingLocation()
         @unknown default:
