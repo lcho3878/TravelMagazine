@@ -22,6 +22,7 @@
 		5422F1F12C0DBE950093932B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5422F1F02C0DBE950093932B /* UIColor+Extension.swift */; };
 		54352ABE2C072BD70017F61E /* PopularCityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54352ABD2C072BD70017F61E /* PopularCityTableViewCell.xib */; };
 		54352ABF2C072BD70017F61E /* PopularCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54352ABC2C072BD70017F61E /* PopularCityTableViewCell.swift */; };
+		543F434C2C4BB25A009CCB41 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 543F434B2C4BB25A009CCB41 /* SnapKit */; };
 		546ED9BC2C04712900E0C27B /* AdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546ED9BA2C04712900E0C27B /* AdTableViewCell.swift */; };
 		546ED9BD2C04712900E0C27B /* AdTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 546ED9BB2C04712900E0C27B /* AdTableViewCell.xib */; };
 		54A100872C0ACF03005DD8AA /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A100862C0ACF03005DD8AA /* ChattingViewController.swift */; };
@@ -109,6 +110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54D3547D2C03275F00C970B1 /* Kingfisher in Frameworks */,
+				543F434C2C4BB25A009CCB41 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +284,7 @@
 			name = TravelMagazine;
 			packageProductDependencies = (
 				54D3547C2C03275F00C970B1 /* Kingfisher */,
+				543F434B2C4BB25A009CCB41 /* SnapKit */,
 			);
 			productName = TravelMagazine;
 			productReference = 54D3545E2C01A22600C970B1 /* TravelMagazine.app */;
@@ -313,6 +316,7 @@
 			mainGroup = 54D354552C01A22600C970B1;
 			packageReferences = (
 				54D3547B2C03275F00C970B1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				543F434A2C4BB25A009CCB41 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 54D3545F2C01A22600C970B1 /* Products */;
 			projectDirPath = "";
@@ -623,6 +627,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		543F434A2C4BB25A009CCB41 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 		54D3547B2C03275F00C970B1 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -634,6 +646,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		543F434B2C4BB25A009CCB41 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 543F434A2C4BB25A009CCB41 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		54D3547C2C03275F00C970B1 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 54D3547B2C03275F00C970B1 /* XCRemoteSwiftPackageReference "Kingfisher" */;

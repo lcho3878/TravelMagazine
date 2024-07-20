@@ -27,32 +27,22 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="o0k-Yp-AGq"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QmO-UP-S8C">
-                                <rect key="frame" x="0.0" y="109" width="393" height="709"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <sections/>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9GU-dy-t7g" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="7Dg-Vo-mOZ"/>
                             <constraint firstItem="9GU-dy-t7g" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="EcD-LF-cLU"/>
-                            <constraint firstItem="QmO-UP-S8C" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="WdE-Eq-ZRa"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="QmO-UP-S8C" secondAttribute="bottom" id="XYp-KQ-qxj"/>
                             <constraint firstItem="9GU-dy-t7g" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="nah-gv-6jF"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="QmO-UP-S8C" secondAttribute="trailing" id="weT-cG-wS6"/>
-                            <constraint firstItem="QmO-UP-S8C" firstAttribute="top" secondItem="9GU-dy-t7g" secondAttribute="bottom" id="xEn-O8-8Gb"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="9GU-dy-t7g" id="ZqP-kn-mSz"/>
-                        <outlet property="talkTableView" destination="QmO-UP-S8C" id="fCu-dv-2zB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-27"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>
