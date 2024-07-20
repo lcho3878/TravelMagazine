@@ -20,7 +20,6 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         configureNavigationItems()
         configureUI()
-        
     }
     
     private func configureNavigationItems() {
